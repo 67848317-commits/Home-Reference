@@ -1,0 +1,31 @@
+{
+  "name": "home-reference",
+  "workingTitle": "Home Reference",
+  "projectType": "Practical Household Knowledge & Reference Website",
+  "targetAudience": "U.S. Homeowners, Prospective Home Buyers, DIY-Curious Households, and Renters",
+  "targetMarket": "United States",
+  "corePositioning": "Understand your home. Maintain it better. Make informed household decisions.",
+  "contentPillars": [
+    "Home Systems",
+    "Appliances",
+    "Home Maintenance",
+    "Lifespan & Replacement",
+    "Costs & Ownership",
+    "Everyday Household Knowledge"
+  ],
+  "technologyStack": {
+    "framework": "Astro 5",
+    "architecture": "Static Site Generation (SSG)",
+    "contentArchitecture": "Astro Content Collections (src/content/reference/)",
+    "language": "TypeScript",
+    "styling": "Tailwind CSS (editorial warm paper palette)",
+    "deployment": "Vercel",
+    "clientRuntime": "Minimal client-side JavaScript; optional lightweight React islands only when interactive features strictly require them",
+    "structuredData": "JSON-LD (Schema.org Article/TechArticle, BreadcrumbList, WebSite)"
+  },
+  "currentPhase": "Phase 2B Batch 2: Five New Evergreen Reference Articles Complete (10 Authored Total)",
+  "v1Scope": "30 High-Utility Reference Articles across 6 Refined Pillars (10 Authored Across Batches 1 & 2)",
+  "description": "A practical digital household reference manual providing clear explanations, honest lifespan benchmarks, maintenance schedules, warning signs, and cost factors for everyday U.S. homeowners.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
