@@ -1,0 +1,79 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { ArticleView } from '../../components/views/ArticleView';
+import { ALL_AUTHORED_ARTICLES } from '../../content/index';
+import { ReferenceArticleContent } from '../../content/config';
+import { generateArticleSchema, generateBreadcrumbSchema } from '../../utils/seo';
+
+export async function getStaticPaths() {
+  const paths: Array<{
+    params: { pillar: string; slug: string };
+    props: {
+      article: ReferenceArticleContent;
+      isCanonical: boolean;
+      canonicalSlug: string;
+    };
+  }> = [];
+
+  for (const article of ALL_AUTHORED_ARTICLES) {
+    // Canonical path: /<pillar>/<slug>/
+    const slugParts = article.slug.replace(/^\/|\/$/g, '').split('/');
+    if (slugParts.length >= 2) {
+      const pillar = slugParts[0];
+      const slug = slugParts[1];
+      paths.push({
+        params: { pillar, slug },
+        props: {
+          article,
+          isCanonical: true,
+          canonicalSlug: article.slug,
+        },
+      });
+    }
+
+    // Aliases paths
+    if (article.aliases && article.aliases.length > 0) {
+      for (const alias of article.aliases) {
+        const aliasParts = alias.replace(/^\/|\/$/g, '').split('/');
+        if (aliasParts.length >= 2) {
+          paths.push({
+            params: { pillar: aliasParts[0], slug: aliasParts[1] },
+            props: {
+              article,
+              isCanonical: false,
+              canonicalSlug: article.slug,
+            },
+          });
+        }
+      }
+    }
+  }
+
+  return paths;
+}
+
+const { article, canonicalSlug } = Astro.props;
+
+const title = article.title;
+const description = article.metaDescription;
+const canonicalUrl = `https://homereference.org${canonicalSlug}`;
+
+const articleSchema = generateArticleSchema(article as any);
+const breadcrumbSchema = generateBreadcrumbSchema([
+  { name: 'Home', item: '/' },
+  { name: article.pillarName, item: `/${article.pillarId}/` },
+  { name: article.title, item: article.slug },
+]);
+const schema = [articleSchema, breadcrumbSchema];
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  canonicalUrl={canonicalUrl}
+  currentPath={article.slug}
+  schemaJson={schema}
+  ogType="article"
+>
+  <ArticleView article={article} />
+</BaseLayout>

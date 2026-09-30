@@ -6,10 +6,17 @@
 import React from 'react';
 
 interface FooterProps {
-  onNavigate: (path: string) => void;
+  onNavigate?: (path: string) => void;
 }
 
 export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
+  const handleClick = (e: React.MouseEvent<HTMLAnchorElement>, path: string) => {
+    if (onNavigate) {
+      e.preventDefault();
+      onNavigate(path);
+    }
+  };
+
   return (
     <footer className="border-t border-[#E5DFD7] bg-[#F4EFEA] text-[#57534E] text-xs pt-12 pb-10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -30,30 +37,33 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
             <span className="text-[11px] font-mono uppercase tracking-wider text-[#1C1917] font-semibold block">
               Infrastructure & Equipment
             </span>
-            <ul className="space-y-1.5">
+            <ul className="space-y-1.5 list-none p-0 m-0">
               <li>
-                <button
-                  onClick={() => onNavigate('/systems/')}
-                  className="hover:text-[#1C1917] transition-colors focus:outline-none"
+                <a
+                  href="/systems/"
+                  onClick={(e) => handleClick(e, '/systems/')}
+                  className="hover:text-[#1C1917] transition-colors"
                 >
                   Home Systems
-                </button>
+                </a>
               </li>
               <li>
-                <button
-                  onClick={() => onNavigate('/appliances/')}
-                  className="hover:text-[#1C1917] transition-colors focus:outline-none"
+                <a
+                  href="/appliances/"
+                  onClick={(e) => handleClick(e, '/appliances/')}
+                  className="hover:text-[#1C1917] transition-colors"
                 >
                   Appliances
-                </button>
+                </a>
               </li>
               <li>
-                <button
-                  onClick={() => onNavigate('/maintenance/')}
-                  className="hover:text-[#1C1917] transition-colors focus:outline-none"
+                <a
+                  href="/maintenance/"
+                  onClick={(e) => handleClick(e, '/maintenance/')}
+                  className="hover:text-[#1C1917] transition-colors"
                 >
                   Home Maintenance
-                </button>
+                </a>
               </li>
             </ul>
           </div>
@@ -63,30 +73,33 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
             <span className="text-[11px] font-mono uppercase tracking-wider text-[#1C1917] font-semibold block">
               Lifespans & Economics
             </span>
-            <ul className="space-y-1.5">
+            <ul className="space-y-1.5 list-none p-0 m-0">
               <li>
-                <button
-                  onClick={() => onNavigate('/lifespan/')}
-                  className="hover:text-[#1C1917] transition-colors focus:outline-none"
+                <a
+                  href="/lifespan/"
+                  onClick={(e) => handleClick(e, '/lifespan/')}
+                  className="hover:text-[#1C1917] transition-colors"
                 >
                   Lifespan & Replacement
-                </button>
+                </a>
               </li>
               <li>
-                <button
-                  onClick={() => onNavigate('/costs/')}
-                  className="hover:text-[#1C1917] transition-colors focus:outline-none"
+                <a
+                  href="/costs/"
+                  onClick={(e) => handleClick(e, '/costs/')}
+                  className="hover:text-[#1C1917] transition-colors"
                 >
                   Costs & Ownership
-                </button>
+                </a>
               </li>
               <li>
-                <button
-                  onClick={() => onNavigate('/everyday/')}
-                  className="hover:text-[#1C1917] transition-colors focus:outline-none"
+                <a
+                  href="/everyday/"
+                  onClick={(e) => handleClick(e, '/everyday/')}
+                  className="hover:text-[#1C1917] transition-colors"
                 >
                   Everyday Knowledge
-                </button>
+                </a>
               </li>
             </ul>
           </div>
@@ -96,30 +109,33 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
             <span className="text-[11px] font-mono uppercase tracking-wider text-[#1C1917] font-semibold block">
               Editorial Standards
             </span>
-            <ul className="space-y-1.5">
+            <ul className="space-y-1.5 list-none p-0 m-0">
               <li>
-                <button
-                  onClick={() => onNavigate('/about/')}
-                  className="hover:text-[#1C1917] transition-colors focus:outline-none"
+                <a
+                  href="/about/"
+                  onClick={(e) => handleClick(e, '/about/')}
+                  className="hover:text-[#1C1917] transition-colors"
                 >
                   About & Methodology
-                </button>
+                </a>
               </li>
               <li>
-                <button
-                  onClick={() => onNavigate('/about/')}
-                  className="hover:text-[#1C1917] transition-colors focus:outline-none"
+                <a
+                  href="/about/"
+                  onClick={(e) => handleClick(e, '/about/')}
+                  className="hover:text-[#1C1917] transition-colors"
                 >
                   Authoritative Source Hierarchy
-                </button>
+                </a>
               </li>
               <li>
-                <button
-                  onClick={() => onNavigate('/about/')}
-                  className="hover:text-[#1C1917] transition-colors focus:outline-none"
+                <a
+                  href="/about/"
+                  onClick={(e) => handleClick(e, '/about/')}
+                  className="hover:text-[#1C1917] transition-colors"
                 >
                   Trade Safety Boundaries
-                </button>
+                </a>
               </li>
             </ul>
           </div>
@@ -137,7 +153,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
           </p>
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pt-3 text-[#A8A29E]">
             <span>© {new Date().getFullYear()} Home Reference. All rights reserved.</span>
-            <span>Static Site Architecture · Version 2.0 (Phase 2A Scaffold)</span>
+            <span>Independent U.S. Household Reference · Editorial Architecture</span>
           </div>
         </div>
       </div>

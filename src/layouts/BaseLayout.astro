@@ -1,0 +1,80 @@
+---
+import { Header } from '../components/Header';
+import { Footer } from '../components/Footer';
+import { SearchModal } from '../components/SearchModal';
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description: string;
+  canonicalUrl?: string;
+  currentPath?: string;
+  schemaJson?: Record<string, unknown> | Array<Record<string, unknown>>;
+  ogType?: string;
+}
+
+const {
+  title,
+  description,
+  canonicalUrl = Astro.url.href,
+  currentPath = Astro.url.pathname,
+  schemaJson,
+  ogType = 'website',
+} = Astro.props;
+
+const formattedTitle = title.includes('Home Reference') ? title : `${title} — Home Reference`;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{formattedTitle}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonicalUrl} />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content={formattedTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:type" content={ogType} />
+    <meta property="og:site_name" content="Home Reference" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content={formattedTitle} />
+    <meta name="twitter:description" content={description} />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400..700;1,6..72,400..700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Structured Data (JSON-LD) -->
+    {schemaJson && (
+      <script type="application/ld+json" set:html={JSON.stringify(schemaJson)} />
+    )}
+  </head>
+  <body class="min-h-screen bg-[#FAF8F5] text-[#1C1917] flex flex-col font-sans selection:bg-[#F4EFEA] selection:text-[#8C4736]">
+    <a
+      href="#main-content"
+      class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-50 focus:px-3 focus:py-2 focus:bg-[#1C1917] focus:text-white"
+    >
+      Skip to main content
+    </a>
+
+    <Header client:load currentPath={currentPath} />
+
+    <main id="main-content" class="flex-1 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+      <slot />
+    </main>
+
+    <Footer />
+
+    <SearchModal client:idle />
+  </body>
+</html>

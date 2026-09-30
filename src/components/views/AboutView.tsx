@@ -4,14 +4,13 @@
  */
 
 import React from 'react';
-import { Breadcrumbs } from '../components/Breadcrumbs';
-import { ShieldCheck, Scale, BookOpen, AlertTriangle } from 'lucide-react';
+import { Breadcrumbs } from '../Breadcrumbs';
 
-interface AboutPageProps {
-  onNavigate: (path: string) => void;
+interface AboutViewProps {
+  onNavigate?: (path: string) => void;
 }
 
-export const AboutPage: React.FC<AboutPageProps> = ({ onNavigate }) => {
+export const AboutView: React.FC<AboutViewProps> = ({ onNavigate }) => {
   return (
     <div className="py-8 sm:py-12 max-w-3xl mx-auto space-y-12">
       <Breadcrumbs items={[{ label: 'About Home Reference' }]} onNavigate={onNavigate} />

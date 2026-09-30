@@ -41,8 +41,7 @@ export const PILLARS_DATA: PillarHub[] = [
     featuredArticleSlugs: [
       '/systems/water-heater-lifespan-and-replacement/',
       '/systems/central-ac-lifespan-and-efficiency/',
-      '/systems/asphalt-shingle-roof-lifespan/',
-      '/systems/electrical-panel-capacity-and-warning-signs/',
+      '/systems/furnace-lifespan-and-replacement/',
     ],
   },
   {
@@ -81,7 +80,6 @@ export const PILLARS_DATA: PillarHub[] = [
       '/appliances/refrigerator-lifespan-and-maintenance/',
       '/appliances/dishwasher-lifespan-and-care/',
       '/appliances/clothes-dryer-lifespan-and-vent-safety/',
-      '/appliances/washing-machine-lifespan-front-vs-top-load/',
     ],
   },
   {
@@ -113,9 +111,6 @@ export const PILLARS_DATA: PillarHub[] = [
     ],
     featuredArticleSlugs: [
       '/maintenance/hvac-filter-replacement-schedule/',
-      '/maintenance/dryer-vent-cleaning-schedule/',
-      '/maintenance/water-heater-flushing-guide/',
-      '/maintenance/gutter-cleaning-and-drainage-guide/',
     ],
   },
   {
@@ -152,9 +147,6 @@ export const PILLARS_DATA: PillarHub[] = [
     ],
     featuredArticleSlugs: [
       '/lifespan/major-home-components-lifespan/',
-      '/lifespan/smoke-and-co-detector-expiration-rules/',
-      '/lifespan/tankless-vs-tank-water-heater-lifespan/',
-      '/lifespan/when-to-replace-windows-indicators/',
     ],
   },
   {
@@ -183,10 +175,7 @@ export const PILLARS_DATA: PillarHub[] = [
         relationship: 'Understanding component availability and common replacement cycle triggers.',
       },
     ],
-    featuredArticleSlugs: [
-      '/costs/appliance-repair-vs-replace-rules/',
-      '/costs/hvac-replacement-cost-factors/',
-    ],
+    featuredArticleSlugs: [],
   },
   {
     id: 'everyday',

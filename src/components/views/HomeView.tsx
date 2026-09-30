@@ -4,36 +4,48 @@
  */
 
 import React from 'react';
-import { Search, ArrowRight, ArrowUpRight, BookOpen, Clock, ShieldCheck } from 'lucide-react';
-import { PILLARS_DATA } from '../data/pillarsData';
-import { getFeaturedArticles, getPilotArticles } from '../data/articlesData';
+import { Search, ArrowRight, ShieldCheck } from 'lucide-react';
+import { PILLARS_DATA } from '../../data/pillarsData';
+import { getFeaturedArticles } from '../../data/articlesData';
 
-interface HomePageProps {
-  onNavigate: (path: string) => void;
-  onOpenSearch: () => void;
+interface HomeViewProps {
+  onNavigate?: (path: string) => void;
+  onOpenSearch?: () => void;
 }
 
-export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenSearch }) => {
+export const HomeView: React.FC<HomeViewProps> = ({ onNavigate, onOpenSearch }) => {
   const featuredArticles = getFeaturedArticles();
   const leadArticle = featuredArticles[0];
   const secondaryArticles = featuredArticles.slice(1, 4);
 
+  // Alphabetical Index strictly restricted to genuinely authored & published reference articles
   const alphabeticalIndex = [
     { topic: 'Air Conditioners & Heat Pumps', path: '/systems/central-ac-lifespan-and-efficiency/', category: 'Systems' },
-    { topic: 'Appliance Repair vs. Replace Rule', path: '/costs/appliance-repair-vs-replace-rules/', category: 'Costs' },
     { topic: 'Circuit Breaker Tripping Diagnostics', path: '/everyday/what-to-do-when-circuit-breaker-trips/', category: 'Everyday' },
     { topic: 'Clothes Dryers & Vent Fire Safety', path: '/appliances/clothes-dryer-lifespan-and-vent-safety/', category: 'Appliances' },
     { topic: 'Dishwasher Care & Filter Cleaning', path: '/appliances/dishwasher-lifespan-and-care/', category: 'Appliances' },
     { topic: 'Emergency Water Shutoff Location', path: '/everyday/main-water-shutoff/', category: 'Everyday' },
-    { topic: 'Furnace Lifespans & Heat Exchangers', path: '/systems/furnace-lifespan-and-warning-signs/', category: 'Systems' },
+    { topic: 'Furnace Lifespans & Heat Exchangers', path: '/systems/furnace-lifespan-and-replacement/', category: 'Systems' },
     { topic: 'HVAC Air Filter Schedule (MERV)', path: '/maintenance/hvac-filter-replacement-schedule/', category: 'Maintenance' },
     { topic: 'Master Home Component Lifespans', path: '/lifespan/major-home-components-lifespan/', category: 'Lifespan' },
     { topic: 'Refrigerator Lifespan & Coils', path: '/appliances/refrigerator-lifespan-and-maintenance/', category: 'Appliances' },
-    { topic: 'Roof Shingles: 3-Tab vs Architectural', path: '/systems/asphalt-shingle-roof-lifespan/', category: 'Systems' },
-    { topic: 'Smoke & CO Alarm 10-Year Rule', path: '/lifespan/smoke-and-co-detector-expiration-rules/', category: 'Lifespan' },
     { topic: 'Water Heater Lifespan & Flushing', path: '/systems/water-heater-lifespan-and-replacement/', category: 'Systems' },
-    { topic: 'Window Seal Failure & Fogging', path: '/systems/window-lifespan-and-seal-failure/', category: 'Systems' },
   ];
+
+  const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>, path: string) => {
+    if (onNavigate) {
+      e.preventDefault();
+      onNavigate(path);
+    }
+  };
+
+  const handleSearchClick = () => {
+    if (onOpenSearch) {
+      onOpenSearch();
+    } else {
+      window.dispatchEvent(new CustomEvent('open-search'));
+    }
+  };
 
   return (
     <div className="space-y-16 sm:space-y-20 py-8 sm:py-12">
@@ -55,8 +67,8 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenSearch }) 
           {/* Restrained Search Trigger */}
           <div className="relative max-w-xl">
             <button
-              onClick={onOpenSearch}
-              className="w-full flex items-center justify-between px-4 py-3 bg-white border border-[#E5DFD7] hover:border-[#8C4736] transition-colors text-left text-sm text-[#78716C] shadow-2xs group focus:outline-none focus-visible:ring-1 focus-visible:ring-[#8C4736]"
+              onClick={handleSearchClick}
+              className="w-full flex items-center justify-between px-4 py-3 bg-white border border-[#E5DFD7] hover:border-[#8C4736] transition-colors text-left text-sm text-[#78716C] shadow-2xs group focus:outline-none focus-visible:ring-1 focus-visible:ring-[#8C4736] cursor-pointer"
             >
               <div className="flex items-center gap-3">
                 <Search className="w-4 h-4 text-[#78716C] group-hover:text-[#8C4736] transition-colors" />
@@ -91,21 +103,26 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenSearch }) 
                 <span>Reviewed {leadArticle.lastReviewedDate}</span>
               </div>
               <h3 className="text-2xl sm:text-3xl font-serif font-bold text-[#1C1917] tracking-tight hover:text-[#8C4736] transition-colors">
-                <button onClick={() => onNavigate(leadArticle.slug)} className="text-left focus:outline-none">
+                <a
+                  href={leadArticle.slug}
+                  onClick={(e) => handleLinkClick(e, leadArticle.slug)}
+                  className="text-left focus:outline-none"
+                >
                   {leadArticle.title}
-                </button>
+                </a>
               </h3>
               <p className="text-sm text-[#57534E] leading-relaxed font-sans">
                 {leadArticle.summary}
               </p>
               <div className="pt-2">
-                <button
-                  onClick={() => onNavigate(leadArticle.slug)}
+                <a
+                  href={leadArticle.slug}
+                  onClick={(e) => handleLinkClick(e, leadArticle.slug)}
                   className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#8C4736] hover:text-[#1C1917] transition-colors"
                 >
                   Read Reference Guide
                   <ArrowRight className="w-3.5 h-3.5" />
-                </button>
+                </a>
               </div>
             </div>
 
@@ -119,9 +136,13 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenSearch }) 
                     <span>{article.readTime}</span>
                   </div>
                   <h4 className="font-serif font-bold text-base sm:text-lg text-[#1C1917] hover:text-[#8C4736] transition-colors">
-                    <button onClick={() => onNavigate(article.slug)} className="text-left focus:outline-none">
+                    <a
+                      href={article.slug}
+                      onClick={(e) => handleLinkClick(e, article.slug)}
+                      className="text-left focus:outline-none"
+                    >
                       {article.title}
-                    </button>
+                    </a>
                   </h4>
                   <p className="text-xs text-[#57534E] line-clamp-2 mt-1 leading-relaxed">
                     {article.summary}
@@ -153,12 +174,13 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenSearch }) 
                   {pillar.slug}
                 </span>
                 <h3 className="text-lg font-serif font-bold text-[#1C1917] mb-2">
-                  <button
-                    onClick={() => onNavigate(pillar.slug)}
+                  <a
+                    href={pillar.slug}
+                    onClick={(e) => handleLinkClick(e, pillar.slug)}
                     className="text-left hover:text-[#8C4736] transition-colors focus:outline-none"
                   >
                     {pillar.name}
-                  </button>
+                  </a>
                 </h3>
                 <p className="text-xs text-[#57534E] leading-relaxed mb-4">
                   {pillar.tagline}
@@ -166,13 +188,14 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenSearch }) 
               </div>
 
               <div className="pt-4 border-t border-[#EDE8E1] flex items-center justify-between text-xs">
-                <button
-                  onClick={() => onNavigate(pillar.slug)}
+                <a
+                  href={pillar.slug}
+                  onClick={(e) => handleLinkClick(e, pillar.slug)}
                   className="inline-flex items-center gap-1 font-semibold text-[#8C4736] hover:text-[#1C1917] transition-colors"
                 >
                   Explore Pillar
                   <ArrowRight className="w-3.5 h-3.5" />
-                </button>
+                </a>
               </div>
             </div>
           ))}
@@ -185,18 +208,19 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenSearch }) 
           <h2 className="text-xs font-mono uppercase tracking-wider text-[#1C1917] font-semibold">
             Household Reference Index
           </h2>
-          <span className="text-xs text-[#78716C]">Quick Topic Directory</span>
+          <span className="text-xs text-[#78716C]">Published Topic Directory</span>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-3 border-t border-[#E5DFD7] pt-4 text-xs">
           {alphabeticalIndex.map((item, idx) => (
             <div key={idx} className="flex items-baseline justify-between py-1.5 border-b border-[#EDE8E1]">
-              <button
-                onClick={() => onNavigate(item.path)}
+              <a
+                href={item.path}
+                onClick={(e) => handleLinkClick(e, item.path)}
                 className="text-left font-serif text-[13px] text-[#1C1917] hover:text-[#8C4736] transition-colors focus:outline-none truncate mr-2"
               >
                 {item.topic}
-              </button>
+              </a>
               <span className="text-[11px] font-mono text-[#78716C] shrink-0">
                 {item.category}
               </span>
@@ -217,12 +241,13 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate, onOpenSearch }) 
           standards (ASHRAE, NFPA, DOE, AHAM) and inspected regularly by our editorial desk.
         </p>
         <div className="pt-2">
-          <button
-            onClick={() => onNavigate('/about/')}
+          <a
+            href="/about/"
+            onClick={(e) => handleLinkClick(e, '/about/')}
             className="text-xs font-semibold text-[#8C4736] hover:underline focus:outline-none"
           >
             Read our source hierarchy & editorial methodology →
-          </button>
+          </a>
         </div>
       </section>
     </div>

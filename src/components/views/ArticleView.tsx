@@ -4,24 +4,25 @@
  */
 
 import React from 'react';
-import { ReferenceArticle } from '../types/reference';
-import { Breadcrumbs } from '../components/Breadcrumbs';
-import { QuickAnswer } from '../components/QuickAnswer';
-import { KeyFactsTable } from '../components/KeyFactsTable';
-import { WarningMatrix } from '../components/WarningMatrix';
-import { MaintenanceGuide } from '../components/MaintenanceGuide';
-import { RepairVsReplace } from '../components/RepairVsReplace';
-import { CostDrivers } from '../components/CostDrivers';
-import { SourceCitations } from '../components/SourceCitations';
-import { RelatedReferences } from '../components/RelatedReferences';
-import { HelpCircle, AlertTriangle, ShieldCheck } from 'lucide-react';
+import { ReferenceArticle } from '../../types/reference';
+import { ReferenceArticleContent } from '../../content/config';
+import { Breadcrumbs } from '../Breadcrumbs';
+import { QuickAnswer } from '../QuickAnswer';
+import { KeyFactsTable } from '../KeyFactsTable';
+import { WarningMatrix } from '../WarningMatrix';
+import { MaintenanceGuide } from '../MaintenanceGuide';
+import { RepairVsReplace } from '../RepairVsReplace';
+import { CostDrivers } from '../CostDrivers';
+import { SourceCitations } from '../SourceCitations';
+import { RelatedReferences } from '../RelatedReferences';
+import { HelpCircle } from 'lucide-react';
 
-interface ArticlePageProps {
-  article: ReferenceArticle;
-  onNavigate: (path: string) => void;
+interface ArticleViewProps {
+  article: ReferenceArticle | ReferenceArticleContent;
+  onNavigate?: (path: string) => void;
 }
 
-export const ArticlePage: React.FC<ArticlePageProps> = ({ article, onNavigate }) => {
+export const ArticleView: React.FC<ArticleViewProps> = ({ article, onNavigate }) => {
   return (
     <article className="py-8 sm:py-12 max-w-3xl mx-auto">
       {/* CORE MODULE 1: Breadcrumbs Navigation */}

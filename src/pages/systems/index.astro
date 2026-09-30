@@ -1,0 +1,24 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { CategoryHubView } from '../../components/views/CategoryHubView';
+import { PILLARS_DATA } from '../../data/pillarsData';
+import { generateBreadcrumbSchema } from '../../utils/seo';
+
+const pillar = PILLARS_DATA.find((p) => p.id === 'systems')!;
+const title = `${pillar.name} Reference Hub`;
+const description = pillar.tagline;
+const schema = generateBreadcrumbSchema([
+  { name: 'Home', item: '/' },
+  { name: pillar.name, item: pillar.slug },
+]);
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  canonicalUrl={`https://homereference.org${pillar.slug}`}
+  currentPath={pillar.slug}
+  schemaJson={schema}
+>
+  <CategoryHubView pillar={pillar} />
+</BaseLayout>

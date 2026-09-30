@@ -4,20 +4,26 @@
  */
 
 import React from 'react';
-import { Breadcrumbs } from '../components/Breadcrumbs';
-import { PillarHub } from '../types/reference';
-import { getArticlesByPillar, getArticleBySlug } from '../data/articlesData';
-import { ArrowRight, BookOpen, HelpCircle, CheckCircle2 } from 'lucide-react';
+import { Breadcrumbs } from '../Breadcrumbs';
+import { PillarHub } from '../../types/reference';
+import { getArticlesByPillar, getPlannedTopicsByPillar } from '../../data/articlesData';
+import { ArrowRight, HelpCircle } from 'lucide-react';
 
-interface CategoryHubPageProps {
+interface CategoryHubViewProps {
   pillar: PillarHub;
-  onNavigate: (path: string) => void;
+  onNavigate?: (path: string) => void;
 }
 
-export const CategoryHubPage: React.FC<CategoryHubPageProps> = ({ pillar, onNavigate }) => {
-  const articlesInPillar = getArticlesByPillar(pillar.id);
-  const pilotArticles = articlesInPillar.filter((a) => a.isPilot);
-  const plannedArticles = articlesInPillar.filter((a) => !a.isPilot);
+export const CategoryHubView: React.FC<CategoryHubViewProps> = ({ pillar, onNavigate }) => {
+  const publishedArticles = getArticlesByPillar(pillar.id);
+  const plannedTopics = getPlannedTopicsByPillar(pillar.id);
+
+  const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>, path: string) => {
+    if (onNavigate) {
+      e.preventDefault();
+      onNavigate(path);
+    }
+  };
 
   return (
     <div className="py-8 sm:py-12 space-y-12 max-w-4xl mx-auto">
@@ -63,18 +69,18 @@ export const CategoryHubPage: React.FC<CategoryHubPageProps> = ({ pillar, onNavi
         </div>
       </section>
 
-      {/* Published & Flagship Pilot Articles */}
+      {/* Published Reference Guides */}
       <section className="space-y-4">
         <div className="flex items-baseline justify-between border-b border-[#E5DFD7] pb-2">
           <h2 className="text-xs font-mono uppercase tracking-wider text-[#1C1917] font-semibold">
-            Flagship Reference Guides
+            Published Reference Guides
           </h2>
-          <span className="text-xs text-[#78716C]">Full Technical Guides</span>
+          <span className="text-xs text-[#78716C]">Verified Technical Manuals</span>
         </div>
 
-        {pilotArticles.length > 0 ? (
+        {publishedArticles.length > 0 ? (
           <div className="divide-y divide-[#E5DFD7]">
-            {pilotArticles.map((article) => (
+            {publishedArticles.map((article) => (
               <div key={article.slug} className="py-5 space-y-2 group">
                 <div className="flex items-center gap-2 text-xs text-[#78716C]">
                   <span className="font-semibold text-[#8C4736]">{article.subcategory}</span>
@@ -84,55 +90,65 @@ export const CategoryHubPage: React.FC<CategoryHubPageProps> = ({ pillar, onNavi
                   <span>Reviewed {article.lastReviewedDate}</span>
                 </div>
                 <h3 className="text-xl font-serif font-bold text-[#1C1917] group-hover:text-[#8C4736] transition-colors">
-                  <button onClick={() => onNavigate(article.slug)} className="text-left focus:outline-none">
+                  <a
+                    href={article.slug}
+                    onClick={(e) => handleLinkClick(e, article.slug)}
+                    className="text-left focus:outline-none"
+                  >
                     {article.title}
-                  </button>
+                  </a>
                 </h3>
                 <p className="text-xs sm:text-sm text-[#57534E] leading-relaxed">
                   {article.summary}
                 </p>
                 <div className="pt-1">
-                  <button
-                    onClick={() => onNavigate(article.slug)}
+                  <a
+                    href={article.slug}
+                    onClick={(e) => handleLinkClick(e, article.slug)}
                     className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#8C4736] hover:underline"
                   >
                     Open Reference Manual
                     <ArrowRight className="w-3.5 h-3.5" />
-                  </button>
+                  </a>
                 </div>
               </div>
             ))}
           </div>
         ) : (
-          <p className="text-xs text-[#78716C] italic">
-            Articles in this hub are scheduled for rollout in Phase 2B. See the planned titles below.
-          </p>
+          <div className="p-6 bg-white border border-[#E5DFD7] text-xs text-[#78716C] space-y-1">
+            <p className="font-medium text-[#1C1917]">
+              Reference guides for this hub are currently in active editorial production.
+            </p>
+            <p className="m-0">
+              Guides under this pillar are authored according to strict source verification standards and will be published upon review.
+            </p>
+          </div>
         )}
       </section>
 
-      {/* Planned V1 Companion Reference Topics */}
-      {plannedArticles.length > 0 && (
+      {/* Planned Reference Topics (In Editorial Production - No Public Routes / Links) */}
+      {plannedTopics.length > 0 && (
         <section className="space-y-4">
           <div className="border-b border-[#E5DFD7] pb-2 flex items-baseline justify-between">
             <h2 className="text-xs font-mono uppercase tracking-wider text-[#1C1917] font-semibold">
-              Planned V1 Reference Topics in this Pillar
+              Planned Editorial Topics in this Pillar
             </h2>
-            <span className="text-xs text-[#78716C]">Topic Registry</span>
+            <span className="text-xs text-[#78716C]">Scheduled Roadmap</span>
           </div>
 
           <div className="divide-y divide-[#EDE8E1]">
-            {plannedArticles.map((article) => (
-              <div key={article.slug} className="py-3 flex flex-col sm:flex-row sm:items-baseline justify-between gap-2">
+            {plannedTopics.map((topic) => (
+              <div key={topic.id} className="py-3 flex flex-col sm:flex-row sm:items-baseline justify-between gap-2">
                 <div>
                   <h4 className="font-serif font-medium text-sm text-[#1C1917]">
-                    {article.title}
+                    {topic.title}
                   </h4>
-                  <p className="text-xs text-[#78716C] mt-0.5">
-                    {article.purpose}
+                  <p className="text-xs text-[#78716C] mt-0.5 m-0">
+                    {topic.purpose}
                   </p>
                 </div>
                 <span className="text-[11px] font-mono text-[#A8A29E] shrink-0">
-                  {article.searchIntent}
+                  {topic.searchIntent}
                 </span>
               </div>
             ))}
@@ -149,12 +165,13 @@ export const CategoryHubPage: React.FC<CategoryHubPageProps> = ({ pillar, onNavi
           {pillar.adjacentPillars.map((adj) => (
             <div key={adj.id} className="p-4 bg-white border border-[#E5DFD7] space-y-2">
               <h3 className="font-serif font-bold text-sm text-[#1C1917]">
-                <button
-                  onClick={() => onNavigate(`/${adj.id}/`)}
+                <a
+                  href={`/${adj.id}/`}
+                  onClick={(e) => handleLinkClick(e, `/${adj.id}/`)}
                   className="hover:text-[#8C4736] transition-colors focus:outline-none"
                 >
                   {adj.name} →
-                </button>
+                </a>
               </h3>
               <p className="text-xs text-[#57534E] leading-relaxed m-0">
                 {adj.relationship}

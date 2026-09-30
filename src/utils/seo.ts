@@ -8,17 +8,17 @@ import { ReferenceArticle, PillarHub } from '../types/reference';
 export const SITE_METADATA = {
   name: 'Home Reference',
   workingTitle: 'Home Reference',
-  siteUrl: 'https://home-reference.org',
+  siteUrl: 'https://homereference.org',
   tagline: 'Understand your home. Maintain it better. Make informed household decisions.',
   description:
     'A practical digital household reference manual for American homes. Authoritative explanations, realistic lifespan benchmarks, warning signs, and maintenance schedules for home systems and appliances.',
   publisher: {
     '@type': 'Organization',
     name: 'Home Reference Editorial Staff',
-    url: 'https://home-reference.org',
+    url: 'https://homereference.org',
     logo: {
       '@type': 'ImageObject',
-      url: 'https://home-reference.org/logo.png',
+      url: 'https://homereference.org/logo.png',
     },
   },
 };

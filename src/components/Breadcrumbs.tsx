@@ -5,27 +5,35 @@
 
 import React from 'react';
 
-interface Crumb {
+export interface Crumb {
   label: string;
   path?: string;
 }
 
-interface BreadcrumbsProps {
+export interface BreadcrumbsProps {
   items: Crumb[];
-  onNavigate: (path: string) => void;
+  onNavigate?: (path: string) => void;
 }
 
 export const Breadcrumbs: React.FC<BreadcrumbsProps> = ({ items, onNavigate }) => {
+  const handleClick = (e: React.MouseEvent<HTMLAnchorElement>, path: string) => {
+    if (onNavigate) {
+      e.preventDefault();
+      onNavigate(path);
+    }
+  };
+
   return (
     <nav aria-label="Breadcrumb" className="text-xs text-[#78716C] mb-6">
       <ol className="flex flex-wrap items-center gap-1.5 list-none p-0 m-0">
         <li>
-          <button
-            onClick={() => onNavigate('/')}
-            className="hover:text-[#1C1917] transition-colors focus:outline-none"
+          <a
+            href="/"
+            onClick={(e) => handleClick(e, '/')}
+            className="hover:text-[#1C1917] transition-colors"
           >
             Home
-          </button>
+          </a>
         </li>
         {items.map((item, index) => {
           const isLast = index === items.length - 1;
@@ -40,12 +48,13 @@ export const Breadcrumbs: React.FC<BreadcrumbsProps> = ({ items, onNavigate }) =
                     {item.label}
                   </span>
                 ) : (
-                  <button
-                    onClick={() => onNavigate(item.path!)}
-                    className="hover:text-[#1C1917] transition-colors focus:outline-none"
+                  <a
+                    href={item.path}
+                    onClick={(e) => handleClick(e, item.path!)}
+                    className="hover:text-[#1C1917] transition-colors"
                   >
                     {item.label}
-                  </button>
+                  </a>
                 )}
               </li>
             </React.Fragment>

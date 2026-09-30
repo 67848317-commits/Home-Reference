@@ -1,0 +1,55 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-paper: #FAF8F5;
+    --color-paper-subtle: #F4EFEA;
+    --color-ink: #1C1917;
+    --color-ink-muted: #57534E;
+    --color-ink-subtle: #78716C;
+    --color-border: #E5DFD7;
+    --color-border-subtle: #EDE8E1;
+    --color-sage: #3D4F41;
+    --color-clay: #8C4736;
+  }
+
+  body {
+    background-color: var(--color-paper);
+    color: var(--color-ink);
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+}
+
+.font-serif {
+  font-family: 'Newsreader', Georgia, Cambria, 'Times New Roman', Times, serif;
+  font-feature-settings: "liga", "kern";
+}
+
+.font-sans {
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Editorial Drop Cap for First Paragraph */
+.editorial-drop-cap::first-letter {
+  font-family: 'Newsreader', Georgia, serif;
+  font-size: 3.5rem;
+  line-height: 0.85;
+  font-weight: 600;
+  float: left;
+  margin-right: 0.75rem;
+  margin-top: 0.25rem;
+  color: var(--color-ink);
+}
+
+/* Subtle Hairline Dividers */
+.hairline-border {
+  border-color: #E5DFD7;
+}
+
+/* Tabular Numerals for Reference Data */
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}

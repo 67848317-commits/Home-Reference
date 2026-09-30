@@ -1,0 +1,23 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { AboutView } from '../components/views/AboutView';
+import { generateBreadcrumbSchema } from '../utils/seo';
+
+const title = 'About Home Reference — Editorial Methodology & Standards';
+const description =
+  'Home Reference is an independent, non-commercial digital household reference manual. Learn about our strict four-tier authoritative source hierarchy and editorial standards.';
+const schema = generateBreadcrumbSchema([
+  { name: 'Home', item: '/' },
+  { name: 'About', item: '/about/' },
+]);
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  canonicalUrl="https://homereference.org/about/"
+  currentPath="/about/"
+  schemaJson={schema}
+>
+  <AboutView />
+</BaseLayout>

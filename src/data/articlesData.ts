@@ -723,21 +723,24 @@ const PLANNED_V1_REGISTRY: ReferenceArticle[] = [
   },
 ];
 
-// Combine the authoritative articles from Content Collections with the planned registry
-// (Filtering out any planned registry stubs whose id, slug, or alias matches an authored article)
+// Authored and published articles from Content Collections ONLY
 export const ARTICLES_DATA: ReferenceArticle[] = [
   ...FLAGSHIP_COLLECTION,
-  ...PLANNED_V1_REGISTRY.filter(
-    (planned) =>
-      !FLAGSHIP_COLLECTION.some(
-        (authored) =>
-          authored.id === planned.id ||
-          authored.slug === planned.slug ||
-          (authored.aliases && authored.aliases.includes(planned.slug)) ||
-          (planned.aliases && planned.aliases.some((a) => a === authored.slug))
-      )
-  ),
 ];
+
+export const PUBLISHED_ARTICLES = ARTICLES_DATA;
+
+// Internal planning registry for editorial roadmap display (no public article pages/routes)
+export const PLANNED_TOPICS_REGISTRY = PLANNED_V1_REGISTRY.filter(
+  (planned) =>
+    !FLAGSHIP_COLLECTION.some(
+      (authored) =>
+        authored.id === planned.id ||
+        authored.slug === planned.slug ||
+        (authored.aliases && authored.aliases.includes(planned.slug)) ||
+        (planned.aliases && planned.aliases.some((a) => a === authored.slug))
+    )
+);
 
 // Helper Functions
 export function getArticleBySlug(slug: string): ReferenceArticle | undefined {
@@ -746,6 +749,10 @@ export function getArticleBySlug(slug: string): ReferenceArticle | undefined {
 
 export function getArticlesByPillar(pillarId: string): ReferenceArticle[] {
   return ARTICLES_DATA.filter((a) => a.pillarId === pillarId);
+}
+
+export function getPlannedTopicsByPillar(pillarId: string) {
+  return PLANNED_TOPICS_REGISTRY.filter((a) => a.pillarId === pillarId);
 }
 
 export function getFeaturedArticles(): ReferenceArticle[] {

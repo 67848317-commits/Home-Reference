@@ -1,0 +1,19 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { HomeView } from '../components/views/HomeView';
+import { generateWebSiteSchema, SITE_METADATA } from '../utils/seo';
+
+const title = 'Home Reference — Practical Household Knowledge & Reference for U.S. Homes';
+const description = SITE_METADATA.description;
+const schema = generateWebSiteSchema();
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  canonicalUrl="https://homereference.org/"
+  currentPath="/"
+  schemaJson={schema}
+>
+  <HomeView />
+</BaseLayout>
