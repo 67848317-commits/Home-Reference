@@ -54,6 +54,13 @@ const formattedTitle = title.includes('Home Reference') ? title : `${title} — 
       rel="stylesheet"
     />
 
+    <!-- Google AdSense -->
+    <script
+      async
+      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1850854173653124"
+      crossorigin="anonymous"
+    ></script>
+
     <!-- Structured Data (JSON-LD) -->
     {schemaJson && (
       <script type="application/ld+json" set:html={JSON.stringify(schemaJson)} />
