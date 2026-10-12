@@ -176,7 +176,7 @@ export const hvacFilterScheduleArticle: ReferenceArticleContent = {
       name: 'American Society of Heating, Refrigerating and Air-Conditioning Engineers (ASHRAE)',
       organization: 'Standards Organization',
       tier: 'standards',
-      citation: 'Standard 52.2: Method of Testing General Ventilation Air-Cleaning Devices for Removal Efficiency by Particle Size',
+      citation: 'ASHRAE Standards Directory: Standard 52.2 (Method of Testing General Ventilation Air-Cleaning Devices)',
       url: 'https://www.ashrae.org/technical-resources/standards-and-guidelines',
     },
     {

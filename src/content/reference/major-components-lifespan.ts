@@ -160,13 +160,6 @@ export const majorComponentsLifespanArticle: ReferenceArticleContent = {
 
   sources: [
     {
-      name: 'National Association of Home Builders (NAHB)',
-      organization: 'Trade Association',
-      tier: 'industry',
-      citation: 'Study of Life Expectancy of Home Components',
-      url: 'https://www.nahb.org',
-    },
-    {
       name: 'International Association of Certified Home Inspectors (InterNACHI)',
       organization: 'Inspection Association',
       tier: 'inspection',

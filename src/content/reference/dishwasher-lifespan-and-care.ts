@@ -222,8 +222,8 @@ export const dishwasherLifespanArticle: ReferenceArticleContent = {
       name: 'NSF International',
       organization: 'Public Health and Safety Standards Organization',
       tier: 'standards',
-      citation: 'NSF/ANSI Standard 184: Residential Dishwashers',
-      url: 'https://www.nsf.org',
+      citation: 'NSF/ANSI Standard 184: Residential Dishwashers (Sanitization Performance)',
+      url: 'https://www.nsf.org/consumer-resources/articles/dishwasher-sanitization',
     },
   ],
 

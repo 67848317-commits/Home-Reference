@@ -218,14 +218,14 @@ export const circuitBreakerTrippingArticle: ReferenceArticleContent = {
       organization: 'National Fire Protection Association',
       tier: 'standards',
       citation: 'NFPA 70: National Electrical Code (NEC) Article 210 (Branch Circuits) & Article 240 (Overcurrent Protection)',
-      url: 'https://www.nfpa.org',
+      url: 'https://www.nfpa.org/codes-and-standards/all-codes-and-standards/list-of-codes-and-standards/detail?code=70',
     },
     {
       name: 'Underwriters Laboratories (UL)',
       organization: 'Standards and Safety Certification Organization',
       tier: 'standards',
       citation: 'UL 489: Standard for Molded-Case Circuit Breakers, Molded-Case Switches, and Circuit-Breaker Enclosures',
-      url: 'https://www.ul.com',
+      url: 'https://www.shopulstandards.com/ProductDetail.aspx?productId=UL489',
     },
   ],
 

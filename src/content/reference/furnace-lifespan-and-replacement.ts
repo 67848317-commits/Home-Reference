@@ -217,7 +217,7 @@ export const furnaceLifespanArticle: ReferenceArticleContent = {
       organization: 'National Fire Protection Association',
       tier: 'standards',
       citation: 'NFPA 54: National Fuel Gas Code & NFPA 72: National Fire Alarm and Signaling Code',
-      url: 'https://www.nfpa.org',
+      url: 'https://www.nfpa.org/codes-and-standards/all-codes-and-standards/list-of-codes-and-standards/detail?code=54',
     },
     {
       name: 'U.S. Department of Energy (DOE)',

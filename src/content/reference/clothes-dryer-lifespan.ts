@@ -216,7 +216,7 @@ export const clothesDryerLifespanArticle: ReferenceArticleContent = {
       organization: 'National Fire Protection Association',
       tier: 'standards',
       citation: 'NFPA Research Report: Home Fires Involving Clothes Dryers and Washing Machines',
-      url: 'https://www.nfpa.org',
+      url: 'https://www.nfpa.org/News-and-Research/Fire-statistics-and-reports/Fire-statistics/Fire-causes/Appliances-and-equipment/Home-fires-involving-clothes-dryers-and-washing-machines',
     },
     {
       name: 'International Code Council (ICC)',

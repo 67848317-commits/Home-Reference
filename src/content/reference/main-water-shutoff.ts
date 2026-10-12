@@ -170,7 +170,7 @@ export const mainWaterShutoffArticle: ReferenceArticleContent = {
       name: 'International Code Council (ICC)',
       organization: 'Model Code Organization',
       tier: 'standards',
-      citation: 'International Residential Code (IRC) Section P2903: Water Supply System Shutoff Valves',
+      citation: 'International Residential Code (IRC) Section P2903.9: Water Supply System Valves',
       url: 'https://codes.iccsafe.org',
     },
   ],
