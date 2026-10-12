@@ -21,8 +21,8 @@ export const waterHeaterLifespanArticle: ReferenceArticleContent = {
   publishedDate: '2026-01-15',
   lastReviewedDate: '2026-09-28',
   reviewer: {
-    name: 'Editorial Staff',
-    desk: 'Mechanical Systems & Standards Desk',
+    name: 'Editorial Desk',
+    desk: 'Home Reference Editorial Desk',
   },
   readTime: '6 min read',
   schemaType: 'TechArticle',
@@ -178,7 +178,7 @@ export const waterHeaterLifespanArticle: ReferenceArticleContent = {
     {
       factor: 'Emergency vs Scheduled Installation',
       detail:
-        'Emergency weekend or late-night replacement calls carry a 30% to 50% labor surcharge compared to planned weekday installations.',
+        'Emergency weekend or late-night replacement calls often carry higher after-hours labor premiums compared to planned weekday installations.',
     },
   ],
 
@@ -205,20 +205,15 @@ export const waterHeaterLifespanArticle: ReferenceArticleContent = {
       name: 'U.S. Department of Energy (DOE)',
       organization: 'Federal Agency',
       tier: 'government',
-      citation: 'Energy Saver: Sizing and Selecting Water Heating Equipment',
+      citation: 'Energy Saver: Selecting a New Water Heater',
       url: 'https://www.energy.gov/energysaver/selecting-new-water-heater',
     },
     {
       name: 'U.S. Consumer Product Safety Commission (CPSC)',
       organization: 'Federal Safety Commission',
       tier: 'government',
-      citation: 'CPSC Scald Prevention Guidance (120°F Water Temperature Safety)',
-    },
-    {
-      name: 'Air-Conditioning, Heating, and Refrigeration Institute (AHRI)',
-      organization: 'Trade Association',
-      tier: 'industry',
-      citation: 'Residential Water Heating Equipment Life Expectancy Benchmarks',
+      citation: 'CPSC Safety Alert: CPSC Warns Of Tap Water Scalds (120°F Recommendation)',
+      url: 'https://www.cpsc.gov/Newsroom/News-Releases/1978/CPSC-Warns-Of-Tap-Water-Scalds',
     },
   ],
 

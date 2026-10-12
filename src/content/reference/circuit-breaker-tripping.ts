@@ -22,8 +22,8 @@ export const circuitBreakerTrippingArticle: ReferenceArticleContent = {
   publishedDate: '2026-04-15',
   lastReviewedDate: '2026-09-28',
   reviewer: {
-    name: 'Editorial Staff',
-    desk: 'Electrical Safety & Infrastructure Desk',
+    name: 'Editorial Desk',
+    desk: 'Home Reference Editorial Desk',
   },
   readTime: '7 min read',
   schemaType: 'Article',
@@ -41,7 +41,7 @@ export const circuitBreakerTrippingArticle: ReferenceArticleContent = {
     {
       label: 'Standard Panel Service Life',
       value: '30 – 40 Years',
-      note: 'Industry planning benchmark supported by CPSC and IEEE; longevity is shortened by ambient dampness and loose busbar connections',
+      note: 'Industry planning benchmark supported by electrical safety standards; longevity is shortened by ambient dampness and loose busbar connections',
       tier: 'C',
     },
     {
@@ -86,7 +86,7 @@ export const circuitBreakerTrippingArticle: ReferenceArticleContent = {
     {
       title: 'Circuit Overload (The Most Common Cause)',
       impact:
-        'Occurs when too many high-wattage resistive heating appliances are plugged into the same branch circuit. Combining an 1,800-watt hair dryer (15 amps) and an 800-watt bathroom heater (6.7 amps) on a 15-amp circuit totals 21.7 amps—guaranteeing a thermal breaker trip within 30 to 90 seconds.',
+        'Occurs when too many high-wattage resistive heating appliances are plugged into the same branch circuit. Combining an 1,800-watt hair dryer (15 amps) and an 800-watt bathroom heater (6.7 amps) on a 15-amp circuit totals 21.7 amps—exceeding rated circuit capacity and prompting a thermal breaker trip.',
     },
     {
       title: 'Short Circuit (Direct Hot-to-Neutral Contact)',
@@ -218,24 +218,14 @@ export const circuitBreakerTrippingArticle: ReferenceArticleContent = {
       organization: 'National Fire Protection Association',
       tier: 'standards',
       citation: 'NFPA 70: National Electrical Code (NEC) Article 210 (Branch Circuits) & Article 240 (Overcurrent Protection)',
+      url: 'https://www.nfpa.org',
     },
     {
-      name: 'U.S. Consumer Product Safety Commission',
-      organization: 'Federal Agency',
-      tier: 'government',
-      citation: 'CPSC Electrical Safety Publication: Residential Circuit Breakers and Service Panel Safety',
-    },
-    {
-      name: 'Underwriters Laboratories',
-      organization: 'Global Safety Certification Organization',
+      name: 'Underwriters Laboratories (UL)',
+      organization: 'Standards and Safety Certification Organization',
       tier: 'standards',
       citation: 'UL 489: Standard for Molded-Case Circuit Breakers, Molded-Case Switches, and Circuit-Breaker Enclosures',
-    },
-    {
-      name: 'IEEE',
-      organization: 'Institute of Electrical and Electronics Engineers',
-      tier: 'standards',
-      citation: 'IEEE Standard 241: Recommended Practice for Electric Power Systems in Commercial and Residential Buildings',
+      url: 'https://www.ul.com',
     },
   ],
 

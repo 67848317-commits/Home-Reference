@@ -14,12 +14,8 @@ export const SITE_METADATA = {
     'A practical digital household reference manual for American homes. Authoritative explanations, realistic lifespan benchmarks, warning signs, and maintenance schedules for home systems and appliances.',
   publisher: {
     '@type': 'Organization',
-    name: 'Home Reference Editorial Staff',
+    name: 'Home Reference Editorial Desk',
     url: 'https://homereference.org',
-    logo: {
-      '@type': 'ImageObject',
-      url: 'https://homereference.org/logo.png',
-    },
   },
 };
 
@@ -89,7 +85,7 @@ export function generateArticleSchema(article: ReferenceArticle) {
     inLanguage: 'en-US',
     author: {
       '@type': 'Organization',
-      name: article.reviewer?.name ? `Home Reference (${article.reviewer.desk})` : 'Home Reference Editorial Staff',
+      name: article.reviewer?.name ? `Home Reference (${article.reviewer.desk})` : 'Home Reference Editorial Desk',
     },
     publisher: SITE_METADATA.publisher,
   };

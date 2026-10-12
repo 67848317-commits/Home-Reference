@@ -22,8 +22,8 @@ export const dishwasherLifespanArticle: ReferenceArticleContent = {
   publishedDate: '2026-04-01',
   lastReviewedDate: '2026-09-28',
   reviewer: {
-    name: 'Editorial Staff',
-    desk: 'Major Appliance & Plumbing Fixtures Desk',
+    name: 'Editorial Desk',
+    desk: 'Home Reference Editorial Desk',
   },
   readTime: '6 min read',
   schemaType: 'Article',
@@ -35,7 +35,7 @@ export const dishwasherLifespanArticle: ReferenceArticleContent = {
   diagnosticWarning: 'Gritty residue on glassware, standing water in bottom tub, or weeping at door corners',
 
   quickAnswer:
-    'A residential dishwasher in the United States lasts an expected planning range of 9 to 12 years. If your dishwasher has stopped cleaning effectively, the culprit is rarely a dying pump or motor. Most modern quiet dishwashers (under 48 dBA) eliminated noisy internal food-grinding blades in favor of a fine cylindrical mesh filter at the bottom of the tub. When this filter is not rinsed, food grease and calcium choke the mesh, recirculating dirty water onto your dishes. Cleaning the filter and clearing mineral deposits from the spray arms restores full cleaning power in the vast majority of cases.',
+    'A residential dishwasher in the United States lasts an expected planning range of 9 to 12 years. If your dishwasher has stopped cleaning effectively, the culprit is rarely a dying pump or motor. Most modern quiet dishwashers (under 48 dBA) eliminated noisy internal food-grinding blades in favor of a fine cylindrical mesh filter at the bottom of the tub. When this filter is not rinsed, food grease and calcium choke the mesh, recirculating dirty water onto your dishes. Cleaning the filter and clearing mineral deposits from the spray arms often resolves cleaning issues without needing mechanical repairs.',
 
   keyFacts: [
     {
@@ -201,7 +201,7 @@ export const dishwasherLifespanArticle: ReferenceArticleContent = {
     {
       question: 'Is it better to scrape or thoroughly rinse dishes before loading?',
       answer:
-        'Always scrape solid food scraps, bones, and citrus seeds into the trash, but do not pre-rinse dishes clean with sponge and water. Modern dishwasher detergents use enzymes (proteases and amylases) that chemically bind to food soils to break them down. If dishes are pre-rinsed squeaky clean, the enzymes have nothing to react with, which causes excess foam, leaves etched rings on glassware, and wastes thousands of gallons of water annually.',
+        'Always scrape solid food scraps, bones, and citrus seeds into the trash, but do not pre-rinse dishes clean with sponge and water. Modern dishwasher detergents use enzymes (proteases and amylases) that chemically bind to food soils to break them down. If dishes are pre-rinsed squeaky clean, the enzymes have nothing to react with, which causes excess foam, leaves etched rings on glassware, and wastes significant amounts of water.',
     },
     {
       question: 'Why are my plastic food storage containers always wet after heated dry?',
@@ -212,28 +212,18 @@ export const dishwasherLifespanArticle: ReferenceArticleContent = {
 
   sources: [
     {
-      name: 'AHAM',
-      organization: 'Association of Home Appliance Manufacturers',
-      tier: 'industry',
-      citation: 'Home Appliance Service Life & Consumer Durability Research Study',
-    },
-    {
-      name: 'U.S. Department of Energy',
-      organization: 'Federal Agency',
+      name: 'ENERGY STAR (U.S. EPA & DOE)',
+      organization: 'Federal Program',
       tier: 'government',
-      citation: 'ENERGY STAR Program Requirements for Residential Dishwashers (Water and Energy Efficiency Standards)',
+      citation: 'ENERGY STAR Program Requirements for Residential Dishwashers',
+      url: 'https://www.energystar.gov/products/dishwashers',
     },
     {
       name: 'NSF International',
       organization: 'Public Health and Safety Standards Organization',
       tier: 'standards',
-      citation: 'NSF/ANSI Standard 184: Residential Dishwashers Sanitization Performance Criteria',
-    },
-    {
-      name: 'Consumer Reports',
-      organization: 'Independent Product Testing Organization',
-      tier: 'industry',
-      citation: 'Dishwasher Reliability and Owner Satisfaction Longitudinal Surveys',
+      citation: 'NSF/ANSI Standard 184: Residential Dishwashers',
+      url: 'https://www.nsf.org',
     },
   ],
 

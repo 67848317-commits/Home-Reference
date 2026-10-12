@@ -21,8 +21,8 @@ export const hvacFilterScheduleArticle: ReferenceArticleContent = {
   publishedDate: '2026-02-01',
   lastReviewedDate: '2026-09-28',
   reviewer: {
-    name: 'Editorial Staff',
-    desk: 'Mechanical Systems & Indoor Air Quality Desk',
+    name: 'Editorial Desk',
+    desk: 'Home Reference Editorial Desk',
   },
   readTime: '5 min read',
   schemaType: 'Article',
@@ -85,7 +85,7 @@ export const hvacFilterScheduleArticle: ReferenceArticleContent = {
     {
       title: 'Household Pets & Shedding Load',
       impact:
-        'Multiple shedding dogs or cats can cut filter service life in half compared to a pet-free home due to coarse fur matting on the filter face.',
+        'Multiple shedding dogs or cats can substantially shorten filter service life compared to a pet-free home due to coarse fur matting on the filter face.',
     },
     {
       title: 'Continuous Fan Operation ("ON" vs "AUTO")',
@@ -149,7 +149,7 @@ export const hvacFilterScheduleArticle: ReferenceArticleContent = {
     {
       factor: 'Bulk Multi-Packs',
       detail:
-        'Purchasing annual packs of 4 to 6 filters online reduces per-unit costs by 30% to 40% compared to hardware store retail singles.',
+        'Purchasing multi-packs of 4 to 6 filters online typically reduces per-unit costs noticeably compared to single retail purchases.',
     },
   ],
 
@@ -177,20 +177,21 @@ export const hvacFilterScheduleArticle: ReferenceArticleContent = {
       organization: 'Standards Organization',
       tier: 'standards',
       citation: 'Standard 52.2: Method of Testing General Ventilation Air-Cleaning Devices for Removal Efficiency by Particle Size',
-      url: 'https://www.ashrae.org',
+      url: 'https://www.ashrae.org/technical-resources/standards-and-guidelines',
     },
     {
       name: 'U.S. Department of Energy (DOE)',
       organization: 'Federal Agency',
       tier: 'government',
-      citation: 'Energy Saver: Maintaining Your Air Conditioner & Air Filters',
+      citation: 'Energy Saver: Maintaining Your Air Conditioner',
       url: 'https://www.energy.gov/energysaver/maintaining-your-air-conditioner',
     },
     {
       name: 'U.S. Environmental Protection Agency (EPA)',
       organization: 'Federal Agency',
       tier: 'government',
-      citation: 'Guide to Air Cleaners in the Home: Portable Air Cleaners and Furnace Filters',
+      citation: 'Guide to Air Cleaners in the Home',
+      url: 'https://www.epa.gov/indoor-air-quality-iaq/guide-air-cleaners-home',
     },
   ],
 

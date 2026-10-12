@@ -22,8 +22,8 @@ export const clothesDryerLifespanArticle: ReferenceArticleContent = {
   publishedDate: '2026-04-10',
   lastReviewedDate: '2026-09-28',
   reviewer: {
-    name: 'Editorial Staff',
-    desk: 'Major Appliance & Fire Safety Desk',
+    name: 'Editorial Desk',
+    desk: 'Home Reference Editorial Desk',
   },
   readTime: '7 min read',
   schemaType: 'Article',
@@ -35,7 +35,7 @@ export const clothesDryerLifespanArticle: ReferenceArticleContent = {
   diagnosticWarning: 'Clothes take two cycles to dry, cabinet feels scalding to touch, or burnt lint odor',
 
   quickAnswer:
-    'A residential clothes dryer typically lasts 12 to 16 years for electric units and 11 to 15 years for gas units—significantly outlasting washing machines because dryers do not endure violent 1,200 RPM wet spin cycles. When a dryer stops heating, the root cause is almost always a tripped thermal cutoff fuse or burnt heating element caused by a clogged exhaust duct. According to reports from the National Fire Protection Association (NFPA) and the U.S. Fire Administration (USFA), failure to clean dryer exhaust systems is the leading contributing factor in clothes dryer fires, which account for thousands of residential structure fires annually. Keeping your 4-inch exhaust line clear is both the premier household fire-safety measure and the single best way to ensure maximum equipment life.',
+    'A residential clothes dryer typically lasts 12 to 16 years for electric units and 11 to 15 years for gas units—significantly outlasting washing machines because dryers do not endure violent 1,200 RPM wet spin cycles. When an electric dryer runs but stops heating, a common trigger is a tripped thermal cutoff fuse or an open heating element resulting from restricted exhaust airflow. Research reports from the National Fire Protection Association (NFPA) and the U.S. Fire Administration (USFA) consistently identify failure to clean dryer exhaust systems as a leading contributing factor in home clothes dryer fires. Keeping your 4-inch exhaust line clear is essential for household fire safety and equipment longevity.',
 
   keyFacts: [
     {
@@ -77,9 +77,9 @@ export const clothesDryerLifespanArticle: ReferenceArticleContent = {
   ],
 
   detailedExplanation: [
-    'A clothes dryer operates by drawing ambient household air into the cabinet, heating it over an electric nickel-chromium resistance coil or a gas combustion burner flame, and tumbling moist fabrics through the warm air stream inside a rotating metal drum. A centrifugal blower fan pulls the moisture-laden air through a fine lint filter and forces it out of the home through an exhaust duct to the exterior. Moisture removal is governed by airflow: if air cannot move swiftly through the exhaust duct, humidity remains trapped in the drum, leaving clothes soaking wet regardless of how hot the burner or heating element gets.',
-    'The pull-out lint screen catches approximately 70% to 80% of airborne fabric fibers. The remaining fine lint bypasses the filter, passes through the blower fan housing, and adheres to the inner walls of the exhaust ducting. Because clothes dryer exhaust carries warm water vapor alongside airborne lint, moist fibers cling to duct seams, sheet metal screws, and bends, creating a felting effect. Over 12 to 24 months, this felt layer chokes the 4-inch duct diameter, dropping exhaust velocity.',
-    'When exhaust airflow is restricted, the internal cabinet temperature spikes dangerously. Modern dryers are equipped with a non-resettable thermal safety fuse—a small thermal switch mounted directly on the blower housing or heating element chamber. If temperatures exceed safe limits (typically 196°F to 350°F depending on sensor location), this safety fuse permanently blows to cut electrical power to the heating element or motor before the lint can ignite. When homeowners find that their dryer drum turns but produces zero heat, a clogged vent duct causing a blown thermal fuse is the culprit in over 85% of cases.',
+    'A clothes dryer operates by drawing ambient household air into the cabinet, heating it over an electric nickel-chromium resistance coil or a gas combustion burner flame, and tumbling moist fabrics through the warm air stream inside a rotating metal drum. A centrifugal blower fan pulls the moisture-laden air through a fine lint filter and forces it out of the home through an exhaust duct to the exterior. Moisture removal is governed by airflow: if air cannot move swiftly through the exhaust duct, humidity remains trapped in the drum, leaving clothes damp regardless of burner or heating element operation.',
+    'While the pull-out lint screen captures the majority of larger airborne fabric fibers during a cycle, finer lint particles regularly bypass or escape around the filter frame, pass through the blower housing, and adhere to the interior walls of the exhaust ducting. Because clothes dryer exhaust carries warm water vapor alongside airborne lint, moist fibers cling to duct seams, elbows, and joints. Over months of regular laundry use, this layer accumulates along the 4-inch duct diameter, restricting exhaust velocity.',
+    'When exhaust airflow is restricted, the internal cabinet temperature rises significantly. Modern dryers are equipped with a non-resettable thermal safety fuse—a small thermal switch mounted directly on the blower housing or heating element chamber. If temperatures exceed safe operating limits, this safety fuse permanently opens to cut electrical power to the heating circuit before excessive heat can damage adjacent components. When homeowners find that their dryer drum turns normally but produces no heat, a restricted exhaust duct causing an overheated internal chamber and a blown thermal fuse is one of the most frequent mechanical causes observed in field diagnostics.',
   ],
 
   factors: [
@@ -216,24 +216,21 @@ export const clothesDryerLifespanArticle: ReferenceArticleContent = {
       organization: 'National Fire Protection Association',
       tier: 'standards',
       citation: 'NFPA Research Report: Home Fires Involving Clothes Dryers and Washing Machines',
+      url: 'https://www.nfpa.org',
     },
     {
-      name: 'International Code Council',
+      name: 'International Code Council (ICC)',
       organization: 'Model Code Organization',
       tier: 'standards',
-      citation: 'International Residential Code (IRC) Section M1502: Clothes Dryer Exhaust Model Regulations',
+      citation: 'International Residential Code (IRC) Section M1502: Dryer Exhaust',
+      url: 'https://codes.iccsafe.org',
     },
     {
-      name: 'U.S. Consumer Product Safety Commission',
-      organization: 'Federal Agency',
+      name: 'U.S. Consumer Product Safety Commission (CPSC)',
+      organization: 'Federal Safety Commission',
       tier: 'government',
-      citation: 'CPSC Safety Alert: Overheated Clothes Dryer Vent Fire Prevention Guidelines',
-    },
-    {
-      name: 'AHAM',
-      organization: 'Association of Home Appliance Manufacturers',
-      tier: 'industry',
-      citation: 'Laundry Appliance Durability & Service Expectancy Technical Benchmarks',
+      citation: 'CPSC Safety Alert: Overheated Clothes Dryer Fires',
+      url: 'https://www.cpsc.gov/Newsroom/News-Releases/1997/CPSC-Warns-of-Clothes-Dryer-Fires',
     },
   ],
 

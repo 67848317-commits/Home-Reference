@@ -6,7 +6,7 @@
 import React from 'react';
 import { Breadcrumbs } from '../Breadcrumbs';
 import { PillarHub } from '../../types/reference';
-import { getArticlesByPillar, getPlannedTopicsByPillar } from '../../data/articlesData';
+import { getArticlesByPillar } from '../../data/articlesData';
 import { ArrowRight, HelpCircle } from 'lucide-react';
 
 interface CategoryHubViewProps {
@@ -16,7 +16,6 @@ interface CategoryHubViewProps {
 
 export const CategoryHubView: React.FC<CategoryHubViewProps> = ({ pillar, onNavigate }) => {
   const publishedArticles = getArticlesByPillar(pillar.id);
-  const plannedTopics = getPlannedTopicsByPillar(pillar.id);
 
   const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>, path: string) => {
     if (onNavigate) {
@@ -125,36 +124,6 @@ export const CategoryHubView: React.FC<CategoryHubViewProps> = ({ pillar, onNavi
           </div>
         )}
       </section>
-
-      {/* Planned Reference Topics (In Editorial Production - No Public Routes / Links) */}
-      {plannedTopics.length > 0 && (
-        <section className="space-y-4">
-          <div className="border-b border-[#E5DFD7] pb-2 flex items-baseline justify-between">
-            <h2 className="text-xs font-mono uppercase tracking-wider text-[#1C1917] font-semibold">
-              Planned Editorial Topics in this Pillar
-            </h2>
-            <span className="text-xs text-[#78716C]">Scheduled Roadmap</span>
-          </div>
-
-          <div className="divide-y divide-[#EDE8E1]">
-            {plannedTopics.map((topic) => (
-              <div key={topic.id} className="py-3 flex flex-col sm:flex-row sm:items-baseline justify-between gap-2">
-                <div>
-                  <h4 className="font-serif font-medium text-sm text-[#1C1917]">
-                    {topic.title}
-                  </h4>
-                  <p className="text-xs text-[#78716C] mt-0.5 m-0">
-                    {topic.purpose}
-                  </p>
-                </div>
-                <span className="text-[11px] font-mono text-[#A8A29E] shrink-0">
-                  {topic.searchIntent}
-                </span>
-              </div>
-            ))}
-          </div>
-        </section>
-      )}
 
       {/* Adjacent Pillars & Cross-Pillar Relationships */}
       <section className="space-y-4 pt-6 border-t border-[#E5DFD7]">

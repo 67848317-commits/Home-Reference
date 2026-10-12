@@ -22,8 +22,8 @@ export const majorComponentsLifespanArticle: ReferenceArticleContent = {
   publishedDate: '2026-02-10',
   lastReviewedDate: '2026-09-28',
   reviewer: {
-    name: 'Editorial Staff',
-    desk: 'Building Assessment & Longevity Desk',
+    name: 'Editorial Desk',
+    desk: 'Home Reference Editorial Desk',
   },
   readTime: '7 min read',
   schemaType: 'Article',
@@ -99,7 +99,7 @@ export const majorComponentsLifespanArticle: ReferenceArticleContent = {
     {
       title: 'Preventative Maintenance Discipline',
       impact:
-        'Simple actions like flushing sediment from a water heater, replacing HVAC filters, or vacuuming refrigerator coils reliably add 3 to 5 years of functional service.',
+        'Simple actions like flushing sediment from a water heater, replacing HVAC filters, or vacuuming refrigerator coils can add meaningful years of functional service.',
     },
     {
       title: 'Equipment Sizing & Installation Quality',
@@ -109,7 +109,7 @@ export const majorComponentsLifespanArticle: ReferenceArticleContent = {
     {
       title: 'Water Chemistry & Mineral Hardness',
       impact:
-        'Hard water minerals accelerate scale buildup across all water-bearing fixtures, reducing water heater and dishwasher life by 20% to 35%.',
+        'Hard water minerals accelerate scale buildup across all water-bearing fixtures, significantly accelerating scale accumulation and reducing water heater and dishwasher service life.',
     },
     {
       title: 'Regional Climate & Annual Runtime',
@@ -136,7 +136,7 @@ export const majorComponentsLifespanArticle: ReferenceArticleContent = {
   repairVsReplace: {
     frameworkName: 'Capital Lifecycle Replacement Strategy',
     summary:
-      'When an asset reaches 80% of its typical lifespan range, shift from a "repair at all costs" mentality to a planned replacement strategy. Obtaining competitive estimates during off-peak seasons avoids the 30% to 50% premiums common to emergency weekend replacements.',
+      'When an asset reaches the later stage of its typical lifespan range, shift from a "repair at all costs" mentality to a planned replacement strategy. Obtaining competitive estimates during off-peak seasons avoids the high labor premiums common to emergency weekend replacements.',
     keyFactors: [
       'Current age relative to the master benchmark',
       'Frequency of service calls in preceding 12 months',
@@ -164,19 +164,14 @@ export const majorComponentsLifespanArticle: ReferenceArticleContent = {
       organization: 'Trade Association',
       tier: 'industry',
       citation: 'Study of Life Expectancy of Home Components',
+      url: 'https://www.nahb.org',
     },
     {
       name: 'International Association of Certified Home Inspectors (InterNACHI)',
-      organization: 'Inspection Society',
+      organization: 'Inspection Association',
       tier: 'inspection',
       citation: 'Standard Estimated Life Expectancy Chart for Homes',
       url: 'https://www.nachi.org/life-expectancy.htm',
-    },
-    {
-      name: 'U.S. Department of Energy (DOE)',
-      organization: 'Federal Agency',
-      tier: 'government',
-      citation: 'Energy Saver Technology Forecasts and Residential Lifecycles',
     },
   ],
 

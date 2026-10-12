@@ -22,8 +22,8 @@ export const centralAcLifespanArticle: ReferenceArticleContent = {
   publishedDate: '2026-03-01',
   lastReviewedDate: '2026-09-28',
   reviewer: {
-    name: 'Editorial Staff',
-    desk: 'Mechanical Systems & Climate Desk',
+    name: 'Editorial Desk',
+    desk: 'Home Reference Editorial Desk',
   },
   readTime: '7 min read',
   schemaType: 'Article',
@@ -139,7 +139,7 @@ export const centralAcLifespanArticle: ReferenceArticleContent = {
       frequency: 'Every 30 to 90 Days',
       safetyTier: 'Tier 2: Routine Maintenance',
       detail:
-        'Slide out the return filter at the indoor air handler or return grilles. Replace clogged 1-inch filters every 30 to 90 days (or 6 to 12 months for 4-inch deep media). Consistent airflow is the single most critical factor in preventing evaporator coil freeze-up.',
+        'Slide out the return filter at the indoor air handler or return grilles. Replace clogged 1-inch filters every 30 to 90 days (or 6 to 12 months for 4-inch deep media). Maintaining unobstructed airflow is a primary factor in preventing evaporator coil freeze-up.',
     },
     {
       step: 'Flush Condensate Drain Line',
@@ -196,7 +196,7 @@ export const centralAcLifespanArticle: ReferenceArticleContent = {
     {
       question: 'Should I replace both the indoor coil and outdoor unit at the same time?',
       answer:
-        'Yes, in almost all circumstances. Central air conditioners are engineered as matched AHRI-certified pairs. Installing a new high-efficiency outdoor condenser with an aged, mismatched indoor evaporator coil results in compromised efficiency, incorrect expansion valve metering, reduced dehumidification, and often voids manufacturer warranty coverage.',
+        'In most circumstances, yes. Central air conditioners are engineered as matched AHRI-certified pairs. Installing a new high-efficiency outdoor condenser with an aged, mismatched indoor evaporator coil often results in compromised efficiency, incorrect expansion valve metering, reduced dehumidification, and can jeopardize manufacturer warranty coverage.',
     },
     {
       question: 'Why does ice form on my air conditioner during hot weather?',
@@ -212,28 +212,25 @@ export const centralAcLifespanArticle: ReferenceArticleContent = {
 
   sources: [
     {
-      name: 'ASHRAE',
-      organization: 'American Society of Heating, Refrigerating and Air-Conditioning Engineers',
+      name: 'U.S. Department of Energy (DOE)',
+      organization: 'Federal Agency',
+      tier: 'government',
+      citation: 'Energy Saver: Central Air Conditioning',
+      url: 'https://www.energy.gov/energysaver/central-air-conditioning',
+    },
+    {
+      name: 'U.S. Environmental Protection Agency (EPA)',
+      organization: 'Federal Agency',
+      tier: 'government',
+      citation: 'EPA AIM Act: Phasedown of Hydrofluorocarbons (HFCs)',
+      url: 'https://www.epa.gov/climate-hfcs-reduction',
+    },
+    {
+      name: 'Air-Conditioning, Heating, and Refrigeration Institute (AHRI)',
+      organization: 'Standards and Certification Organization',
       tier: 'standards',
-      citation: 'ASHRAE Handbook — HVAC Applications: Equipment Life Expectancy Chart',
-    },
-    {
-      name: 'U.S. Department of Energy',
-      organization: 'Federal Agency',
-      tier: 'government',
-      citation: 'Energy Saver: Central Air Conditioning Standards & SEER2 Regional Efficiency Regulations',
-    },
-    {
-      name: 'U.S. Environmental Protection Agency',
-      organization: 'Federal Agency',
-      tier: 'government',
-      citation: 'EPA AIM Act: Phasedown of Hydrofluorocarbons (HFCs) & Low-GWP Transition Guidelines',
-    },
-    {
-      name: 'AHRI',
-      organization: 'Air-Conditioning, Heating, and Refrigeration Institute',
-      tier: 'industry',
-      citation: 'AHRI Directory of Certified Product Performance & Matched System Protocols',
+      citation: 'AHRI Directory of Certified Product Performance',
+      url: 'https://www.ahridirectory.org',
     },
   ],
 

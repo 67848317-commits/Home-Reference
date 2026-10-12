@@ -21,8 +21,8 @@ export const refrigeratorLifespanArticle: ReferenceArticleContent = {
   publishedDate: '2026-01-20',
   lastReviewedDate: '2026-09-28',
   reviewer: {
-    name: 'Editorial Staff',
-    desk: 'Major Appliance Standards Desk',
+    name: 'Editorial Desk',
+    desk: 'Home Reference Editorial Desk',
   },
   readTime: '6 min read',
   schemaType: 'Article',
@@ -101,7 +101,7 @@ export const refrigeratorLifespanArticle: ReferenceArticleContent = {
     {
       title: 'Through-the-Door Ice & Water Dispensers',
       impact:
-        'In-door ice pathways cross flexible door hinges where wiring harnesses flex, making dispensers the single highest failure sub-assembly on modern units.',
+        'In-door ice pathways cross flexible door hinges where wiring harnesses flex, making dispensers one of the most frequent service call items on modern units.',
     },
   ],
 
@@ -150,7 +150,7 @@ export const refrigeratorLifespanArticle: ReferenceArticleContent = {
   repairVsReplace: {
     frameworkName: 'Appliance Repair vs. Replace Framework',
     summary:
-      'When facing a component failure, evaluate the machine using age, repair cost, and parts availability. If a refrigerator is under 8 years old and the failure is an external part (defrost thermostat, evaporator fan motor, door gasket, or start relay), repair is almost always economical ($120–$250). If the unit is over 10 years old and the compressor or sealed system has failed, replacement is generally the rational financial choice.',
+      'When facing a component failure, evaluate the machine using age, repair cost, and parts availability. If a refrigerator is under 8 years old and the failure is an external part (defrost thermostat, evaporator fan motor, door gasket, or start relay), repair is often economical ($120–$250). If the unit is over 10 years old and the compressor or sealed system has failed, replacement is generally the rational financial choice.',
     keyFactors: [
       'Whether the failure involves the sealed system (compressor/evaporator) vs. replaceable auxiliary parts',
       'Age relative to the 10–14 year average lifespan',
@@ -181,7 +181,7 @@ export const refrigeratorLifespanArticle: ReferenceArticleContent = {
     {
       question: 'Why does my refrigerator make a clicking sound every few minutes and stop cooling?',
       answer:
-        'This sound is almost always the overload protector tripping on the compressor start relay. The compressor tries to start, draws excessive current due to a worn start capacitor or seized piston, and the thermal safety clicks open to prevent an electrical fire. Replacing a $30–$60 start relay often resolves this without needing a new compressor.',
+        'This sound is frequently the overload protector tripping on the compressor start relay. The compressor tries to start, draws excessive current due to a worn start capacitor or seized piston, and the thermal safety clicks open to prevent an electrical fire. Replacing a $30–$60 start relay often resolves this without needing a new compressor.',
     },
     {
       question: 'Is it worth replacing a compressor on an 8-year-old refrigerator?',
@@ -197,23 +197,18 @@ export const refrigeratorLifespanArticle: ReferenceArticleContent = {
 
   sources: [
     {
-      name: 'Association of Home Appliance Manufacturers (AHAM)',
-      organization: 'Trade Association',
-      tier: 'industry',
-      citation: 'Appliance Life Expectancy and Replacement Survey',
-    },
-    {
       name: 'U.S. Food and Drug Administration (FDA)',
       organization: 'Federal Agency',
       tier: 'government',
-      citation: 'Refrigerator & Freezer Safe Food Storage Temperatures',
+      citation: 'Consumer Update: Are You Storing Food Safely? (Refrigerator and Freezer Temperatures)',
       url: 'https://www.fda.gov/consumers/consumer-updates/are-you-storing-food-safely',
     },
     {
-      name: 'U.S. Environmental Protection Agency (EPA)',
-      organization: 'Federal Agency',
+      name: 'ENERGY STAR (U.S. EPA & DOE)',
+      organization: 'Federal Program',
       tier: 'government',
-      citation: 'ENERGY STAR Qualified Refrigerators and Refrigerant Safety',
+      citation: 'ENERGY STAR Program Guidance for Refrigerators',
+      url: 'https://www.energystar.gov/products/appliances/refrigerators',
     },
   ],
 

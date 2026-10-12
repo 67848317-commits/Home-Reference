@@ -23,8 +23,8 @@ export const furnaceLifespanArticle: ReferenceArticleContent = {
   publishedDate: '2026-03-05',
   lastReviewedDate: '2026-09-28',
   reviewer: {
-    name: 'Editorial Staff',
-    desk: 'Combustion Safety & Mechanical Systems Desk',
+    name: 'Editorial Desk',
+    desk: 'Home Reference Editorial Desk',
   },
   readTime: '7 min read',
   schemaType: 'Article',
@@ -207,7 +207,7 @@ export const furnaceLifespanArticle: ReferenceArticleContent = {
     {
       question: 'Should I replace my furnace and air conditioner at the same time?',
       answer:
-        'If both systems are over 12 to 15 years old, replacing them together as a bundled system typically saves $1,000 to $2,500 in combined installation labor, electrical work, and permit fees. It also ensures the new furnace blower motor is properly matched in CFM output to the air conditioner evaporator coil for optimal SEER2 efficiency.',
+        'If both systems are over 12 to 15 years old, replacing them together as a bundled system typically yields noticeable labor savings compared to separate installations, while minimizing disruption and permitting overhead. It also ensures the new furnace blower motor is properly matched in CFM output to the air conditioner evaporator coil for optimal SEER2 efficiency.',
     },
   ],
 
@@ -217,24 +217,21 @@ export const furnaceLifespanArticle: ReferenceArticleContent = {
       organization: 'National Fire Protection Association',
       tier: 'standards',
       citation: 'NFPA 54: National Fuel Gas Code & NFPA 72: National Fire Alarm and Signaling Code',
+      url: 'https://www.nfpa.org',
     },
     {
-      name: 'AHRI',
-      organization: 'Air-Conditioning, Heating, and Refrigeration Institute',
-      tier: 'industry',
-      citation: 'Residential Furnace Lifespan Benchmarks & AFUE Efficiency Certification Standards',
-    },
-    {
-      name: 'U.S. Department of Energy',
+      name: 'U.S. Department of Energy (DOE)',
       organization: 'Federal Agency',
       tier: 'government',
-      citation: 'Energy Saver: Furnaces and Boilers Energy Efficiency Standards',
+      citation: 'Energy Saver: Furnaces and Boilers',
+      url: 'https://www.energy.gov/energysaver/furnaces-and-boilers',
     },
     {
-      name: 'InterNACHI',
-      organization: 'International Association of Certified Home Inspectors',
+      name: 'International Association of Certified Home Inspectors (InterNACHI)',
+      organization: 'Inspection Association',
       tier: 'inspection',
-      citation: 'Standard Estimated Life Expectancy Chart for Residential Heating Equipment',
+      citation: 'Standard Estimated Life Expectancy Chart for Homes',
+      url: 'https://www.nachi.org/life-expectancy.htm',
     },
   ],
 

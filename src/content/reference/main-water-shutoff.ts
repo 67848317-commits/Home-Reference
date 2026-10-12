@@ -22,8 +22,8 @@ export const mainWaterShutoffArticle: ReferenceArticleContent = {
   publishedDate: '2026-02-15',
   lastReviewedDate: '2026-09-28',
   reviewer: {
-    name: 'Editorial Staff',
-    desk: 'Home Safety & Plumbing Literacy Desk',
+    name: 'Editorial Desk',
+    desk: 'Home Reference Editorial Desk',
   },
   readTime: '5 min read',
   schemaType: 'Article',
@@ -81,7 +81,7 @@ export const mainWaterShutoffArticle: ReferenceArticleContent = {
     {
       title: 'Basement Foundations',
       impact:
-        'The valve is almost always located low on the front foundation wall facing the street, directly before or after the municipal water meter.',
+        'The valve is most frequently located low on the front foundation wall facing the street, directly before or after the municipal water meter.',
     },
     {
       title: 'Crawlspace Foundations',
@@ -144,7 +144,7 @@ export const mainWaterShutoffArticle: ReferenceArticleContent = {
     {
       question: 'What should I do if my main water valve is frozen and will not budge?',
       answer:
-        'Do NOT use a wrench or cheater pipe to force an old round gate valve—the internal brass stem will easily snap off, creating an uncontainable leak. Instead, locate the isolated shutoff valve under the specific leaking fixture (sink or toilet angle stop). Then call a licensed plumber to replace the old gate valve with a modern full-port quarter-turn ball valve.',
+        'Do NOT use a wrench or cheater pipe to force an old round gate valve—the internal brass stem can snap off, creating an uncontainable leak. Instead, locate the isolated shutoff valve under the specific leaking fixture (sink or toilet angle stop). Then call a licensed plumber to replace the old gate valve with a modern full-port quarter-turn ball valve.',
     },
     {
       question: 'Should I shut off my main water valve when going on vacation?',
@@ -160,23 +160,18 @@ export const mainWaterShutoffArticle: ReferenceArticleContent = {
 
   sources: [
     {
-      name: 'American Water Works Association (AWWA)',
-      organization: 'Standards Body',
-      tier: 'standards',
-      citation: 'Residential Water Service & Backflow Standards (Manual of Water Supply Practices M22)',
-    },
-    {
       name: 'International Association of Certified Home Inspectors (InterNACHI)',
-      organization: 'Inspection Society',
+      organization: 'Inspection Association',
       tier: 'inspection',
-      citation: 'Home Inspection Standards: Water Shutoff Valve Identification & Inspection Protocol',
-      url: 'https://www.nachi.org',
+      citation: 'Home Inspection Standards of Practice (Plumbing Systems)',
+      url: 'https://www.nachi.org/sop.htm',
     },
     {
       name: 'International Code Council (ICC)',
-      organization: 'Code Standards Organization',
+      organization: 'Model Code Organization',
       tier: 'standards',
-      citation: 'International Residential Code (IRC) Section P2903: Water-Service Pipe & Shutoff Valves',
+      citation: 'International Residential Code (IRC) Section P2903: Water Supply System Shutoff Valves',
+      url: 'https://codes.iccsafe.org',
     },
   ],
 
