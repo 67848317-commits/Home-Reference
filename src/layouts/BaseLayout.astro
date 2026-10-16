@@ -23,6 +23,11 @@ const {
 } = Astro.props;
 
 const formattedTitle = title.includes('Home Reference') ? title : `${title} — Home Reference`;
+
+const gaMeasurementId = (import.meta.env.PUBLIC_GA_MEASUREMENT_ID || process.env.PUBLIC_GA_MEASUREMENT_ID)?.trim();
+const isProd = import.meta.env.PROD;
+const isValidGaId = Boolean(gaMeasurementId && /^G-[A-Z0-9]+$/i.test(gaMeasurementId));
+const enableAnalytics = isProd && isValidGaId;
 ---
 
 <!doctype html>
@@ -53,6 +58,22 @@ const formattedTitle = title.includes('Home Reference') ? title : `${title} — 
       href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400..700;1,6..72,400..700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
+
+    <!-- Google Analytics (GA4) -->
+    {enableAnalytics && (
+      <>
+        <script
+          async
+          src={`https://www.googletagmanager.com/gtag/js?id=${gaMeasurementId}`}
+        ></script>
+        <script is:inline define:vars={{ gaMeasurementId }}>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', gaMeasurementId);
+        </script>
+      </>
+    )}
 
     <!-- Google AdSense -->
     <script
