@@ -43,8 +43,8 @@ const DETAILS: Record<string, ComponentDetail> = {
     id: 'sediment',
     name: 'Calcium Carbonate Sediment Blanket',
     category: 'Combustion / Thermal',
-    description: 'Precipitated calcium and magnesium minerals that settle at the curved bottom of the tank as water is heated above 120°F.',
-    failureMechanism: 'Forms an insulating mineral barrier between the burner flame and the water. Trapped water under the blanket boils into steam bubbles ("popping" kettle noise), overheating the bottom steel head and causing thermal fatigue and weld seam rupture.',
+    description: 'Precipitated calcium and magnesium minerals from hard water that can settle at the bottom of the tank, increasing with higher water hardness and operating temperatures.',
+    failureMechanism: 'Forms an insulating mineral layer that slows heat transfer into the water. Water trapped in or under the sediment can form localized steam bubbles ("kettling" popping noise) and elevate localized thermal stress on the tank bottom or lower elements.',
     maintenanceAction: 'Follow your specific manufacturer’s manual to drain and flush loose sediment periodically (shut off power/fuel first and protect against scalding hot pressurized water).'
   },
   flue: {

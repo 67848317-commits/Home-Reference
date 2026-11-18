@@ -23,8 +23,8 @@
     "clientRuntime": "Minimal client-side JavaScript; optional lightweight React islands only when interactive features strictly require them",
     "structuredData": "JSON-LD (Schema.org Article/TechArticle, BreadcrumbList, WebSite)"
   },
-  "currentPhase": "Phase 2B Batch 2: Five New Evergreen Reference Articles Complete (10 Authored Total)",
-  "v1Scope": "30 High-Utility Reference Articles across 6 Refined Pillars (10 Authored Across Batches 1 & 2)",
+  "currentPhase": "Phase 1.4: Content Stability, Editorial Freeze & Final Quality Control (10 Published Articles)",
+  "v1Scope": "10 Published Reference Articles across 5 Active Hubs (+ /about/, /costs/ noindex, /404.html); additional V1 topics deferred internally",
   "description": "A practical digital household reference manual providing clear explanations, honest lifespan benchmarks, maintenance schedules, warning signs, and cost factors for everyday U.S. homeowners.",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]

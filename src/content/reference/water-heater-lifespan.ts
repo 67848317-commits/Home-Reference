@@ -19,7 +19,7 @@ export const waterHeaterLifespanArticle: ReferenceArticleContent = {
   metaDescription:
     'Lifespan benchmarks for residential water heaters (8–12 yrs tank / 15–20+ yrs tankless planning ranges), sacrificial anode chemistry, water chemistry factors, sediment failure mechanics, and replacement criteria.',
   publishedDate: '2026-01-15',
-  lastReviewedDate: '2026-11-04',
+  lastReviewedDate: '2026-11-17',
   reviewer: {
     name: 'Editorial Desk',
     desk: 'Home Reference Editorial Desk',
@@ -91,8 +91,8 @@ export const waterHeaterLifespanArticle: ReferenceArticleContent = {
     'Residential storage water heaters operate continuously under 40 to 80 psi of hydrostatic municipal water pressure while undergoing cyclic thermal expansion and contraction. Standard residential tanks are fabricated from carbon steel and coated internally with a high-temperature vitreous porcelain enamel (commonly termed "glass lining"). While this glass layer isolates the majority of the steel surface from corrosive water, microscopic hairline voids and fissures inevitably exist from thermal flexing and manufacturing tolerances.',
     'To protect the exposed steel at these micro-fissures, water heaters rely on electrochemical galvanic cathodic protection. A sacrificial anode rod—typically an extruded magnesium or aluminum alloy around a central steel core wire—is suspended vertically through the tank. Because magnesium and aluminum are more electrochemically active than steel, a natural galvanic cell is established through the conductive water. Electrons flow from the anode to the steel shell, causing the anode rod to corrode preferentially while preserving the steel.',
     'Water chemistry and operating conditions influence how quickly a sacrificial anode rod is consumed. Galvanic protection depends on multiple chemical and physical variables, including dissolved mineral content, pH, operating temperature, and household water volume throughput. Ion-exchange water softeners alter water chemistry by exchanging calcium and magnesium ions for sodium ions. However, controlled primary-source evidence does not establish a predictable anode depletion rate or universal causal effect across residential installations. Because manufacturer recommendations vary—with some brands suggesting specific inspection routines or alternative anode materials (such as aluminum-zinc or powered anodes) in softened water environments—homeowners should consult their manufacturer manual and base maintenance on physical inspection rather than assuming a fixed calendar schedule or predictable chemistry effect. Once the sacrificial metal is exhausted down to its core wire, galvanic corrosion shifts to the exposed steel of the tank shell, leading to pitting, pinholes, and eventual tank failure.',
-    'Thermal degradation from calcium carbonate sediment represents the second major mechanical failure mode. In hard water areas, minerals precipitate out of solution as water heats above 120°F and settle at the curved bottom of the tank. On gas water heaters, this creates an insulating mineral blanket between the burner flame and the water. Water trapped beneath this mineral layer superheats, flashes into steam bubbles, and pops violently (producing the characteristic kettle-rumbling noise). Because heat cannot transfer efficiently into the water, the steel bottom plate overheats, resulting in metal fatigue, weld seam deformation, and eventual rupture.',
-    'When a storage tank leaks from the vessel itself, water migrates through the high-density polyurethane insulation jacket and weeps from the lower casing seam. Because the vessel is a pressurized envelope, it cannot be patched, epoxied, or welded. A weeping or leaking tank requires immediate replacement.',
+    'Thermal stress from mineral sediment accumulation is another common wear mechanism. When hard water is heated—especially at higher operating temperatures—dissolved calcium and magnesium minerals can precipitate out of solution and settle at the bottom of the tank. Over time, a thick sediment layer can insulate the bottom of the tank or lower electric heating elements from the surrounding water, reducing heating efficiency and raising localized metal temperatures. As water trapped within or beneath porous sediment heats, localized steam bubbles can form and collapse, producing the characteristic popping or rumbling noise known as kettling. Sustained localized overheating can increase thermal stress on the tank bottom or heating elements, though exact service-life impact varies with water hardness, burner or element design, and flushing maintenance.',
+    'When a storage tank leaks from the vessel itself, water migrates through the high-density polyurethane insulation jacket and weeps from the lower casing seam. Because the inner tank is a pressurized steel vessel coated internally with glass enamel, field patching, epoxying, or welding cannot stop internal corrosion or restore structural integrity. A leaking tank vessel requires replacement.',
   ],
 
   factors: [
@@ -114,7 +114,7 @@ export const waterHeaterLifespanArticle: ReferenceArticleContent = {
     {
       title: 'Hydrostatic Pressure & Thermal Expansion',
       impact:
-        'Municipal street pressures exceeding 80 psi, or closed plumbing systems (mandated with backflow preventers or check valves) lacking a functioning thermal expansion tank, create cyclic pressure spikes that fatigue tank weld seams.',
+        'High municipal supply pressure (commonly above 80 psi) or closed plumbing systems (where a check valve or backflow preventer blocks backflow) lacking a functioning thermal expansion tank can experience recurring pressure spikes during heating cycles that place added stress on tank and plumbing components.',
     },
   ],
 
@@ -126,11 +126,11 @@ export const waterHeaterLifespanArticle: ReferenceArticleContent = {
     ],
     attention: [
       'Popping, crackling, or rumbling noises (kettling) during active burner firing (indicates insulating sediment accumulation)',
-      'Water temperature fluctuates unpredictably during normal shower use (often indicates cold dip tube cracking)',
+      'Water temperature fluctuates unpredictably during normal shower use (can indicate a damaged cold dip tube, thermostat fault, or heavy sediment)',
       'Faint sulfur or rotten-egg odor in hot water (interaction between sulfate-reducing bacteria and magnesium anode)',
     ],
     immediate: [
-      'Active water pooling in the emergency drain pan or around the tank base (signals inner vessel breach)',
+      'Active water pooling in the emergency drain pan or around the tank base (may signal an inner vessel breach—confirm it is not an external fitting, drain valve, or T&P line)',
       'Rusty, discolored water flowing exclusively from hot taps (signals active galvanic oxidation of internal steel)',
       'Continuous dripping or heavy mineral crusting from the T&P relief valve discharge tube (may indicate thermal expansion, excessive supply pressure, high temperature, or valve seat wear—never cap or plug)',
     ],
@@ -163,10 +163,10 @@ export const waterHeaterLifespanArticle: ReferenceArticleContent = {
   repairVsReplace: {
     frameworkName: 'Water Heater Repair vs. Replacement Decision Framework',
     summary:
-      'If an external auxiliary component fails (electric heating element, thermostat, thermocouple, gas pilot assembly, or external pipe connection) and the tank is under 8 years old with no signs of tank rust, repair is cost-effective ($150–$350). However, if water is weeping from the insulated tank casing, the internal steel vessel has corroded through and replacement is mandatory.',
+      'If an external auxiliary component fails (electric heating element, thermostat, thermocouple, gas control/pilot assembly, or external pipe connection) and the tank is relatively young (for example, under 8 years) with no signs of vessel corrosion, targeted repair is often practical when replacement parts are available. However, if water is weeping from the insulated tank casing itself, the internal steel vessel has corroded through and replacement is necessary.',
     keyFactors: [
       'Location of leak: Threaded fitting vs. lower casing seam (tank failure)',
-      'Age relative to DOE 8–12 year average lifetime',
+      'Age relative to 8–12 year planning lifespan and manufacturer warranty status',
       'Accumulation of mineral scale and rumbling severity',
       'Presence of thermal expansion tank and compliant venting',
     ],
@@ -176,17 +176,17 @@ export const waterHeaterLifespanArticle: ReferenceArticleContent = {
     {
       factor: 'Equipment Technology & Energy Source',
       detail:
-        'Atmospheric gas tanks ($600–$1,100 unit cost), electric resistance tanks ($500–$900), power-vent gas ($1,300–$2,200), and hybrid heat pump water heaters ($1,600–$2,800).',
+        'Atmospheric gas, electric resistance, power-vent gas, and hybrid heat pump water heaters vary substantially in upfront unit cost, electrical/venting requirements, and installation scope.',
     },
     {
-      factor: 'Municipal Code Mandates & Expansion Tanks',
+      factor: 'Municipal Code Requirements & Expansion Tanks',
       detail:
-        'Most current municipal plumbing codes require a thermal expansion tank ($120–$250 installed) on closed systems, seismic strapping in seismic zones, and dedicated discharge piping to an approved drain or exterior.',
+        'Where adopted, local plumbing codes often require thermal expansion protection on closed systems, seismic strapping in seismic zones, drain pans, and compliant T&P discharge piping.',
     },
     {
       factor: 'Emergency vs. Planned Installation Timing',
       detail:
-        'Emergency weekend replacements after a catastrophic tank rupture often carry 30% to 50% higher labor premiums compared to proactive weekday scheduling.',
+        'Emergency after-hours or weekend replacements typically carry higher labor rates than proactive weekday scheduling.',
     },
   ],
 
@@ -194,7 +194,7 @@ export const waterHeaterLifespanArticle: ReferenceArticleContent = {
     {
       question: 'Can a leaking water heater tank be patched or welded?',
       answer:
-        'No. A residential water heater tank is a pressurized vessel operating under 40 to 80 psi. The inner steel tank is lined with vitreous porcelain enamel (glass) and encased in thick polyurethane foam insulation within a metal outer skin. Any leak appearing at the bottom seam indicates that water has penetrated through the glass lining and corroded through the structural steel. Patching or welding is dangerous, will void insurance, and cannot stop internal corrosion.',
+        'No. A residential water heater tank is a pressurized vessel operating under normal household water pressure (typically 40 to 80 psi). The inner steel tank is coated with vitreous porcelain enamel (glass) and encased in foam insulation inside an outer jacket. Water weeping from the bottom seam generally indicates corrosion through the internal tank wall. Field patching or welding is unsafe, violates equipment listing and manufacturer terms, cannot stop ongoing internal corrosion, and may jeopardize warranty or property-insurance coverage depending on policy terms.',
     },
     {
       question: 'Does a whole-house water softener affect a water heater?',
@@ -209,7 +209,7 @@ export const waterHeaterLifespanArticle: ReferenceArticleContent = {
     {
       question: 'What causes the loud popping or boiling sound in my water heater?',
       answer:
-        'This phenomenon—often called kettling—occurs when calcium carbonate precipitates and creates a dense sediment blanket at the bottom of the tank. Water becomes trapped underneath this mineral layer, superheats past boiling temperature, and erupts through the sediment as steam bubbles. In gas units, this insulating layer overheats the bottom steel plate, accelerating metal fatigue and eventual weld seam failure.',
+        'This sound—often called kettling—typically occurs when dissolved hardness minerals precipitate and accumulate as sediment at the bottom of the tank. That insulating layer slows heat transfer from the burner or lower heating element into the bulk water, allowing water trapped inside or beneath the sediment to reach boiling temperature locally and form steam bubbles that pop as they escape into cooler water above. Regular flushing per the manufacturer’s manual helps remove loose sediment before hard scale builds up.',
     },
   ],
 

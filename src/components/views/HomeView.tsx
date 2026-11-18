@@ -237,8 +237,9 @@ export const HomeView: React.FC<HomeViewProps> = ({ onNavigate, onOpenSearch }) 
         </div>
         <p className="text-[#57534E] leading-relaxed max-w-3xl m-0">
           Home Reference is funded without contractor referral fees, lead-generation popups, or
-          sponsored appliance placements. Every reference benchmark is grounded in public consensus
-          standards (ASHRAE, NFPA, DOE, AHAM) and inspected regularly by our editorial desk.
+          sponsored appliance placements. Reference guides synthesize publicly available government
+          guidance, safety standards, and trade inspection charts while distinguishing documented
+          rules from general planning estimates.
         </p>
         <div className="pt-2">
           <a

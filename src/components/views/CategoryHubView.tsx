@@ -74,7 +74,7 @@ export const CategoryHubView: React.FC<CategoryHubViewProps> = ({ pillar, onNavi
           <h2 className="text-xs font-mono uppercase tracking-wider text-[#1C1917] font-semibold">
             Published Reference Guides
           </h2>
-          <span className="text-xs text-[#78716C]">Verified Technical Manuals</span>
+          <span className="text-xs text-[#78716C]">Published Technical Manuals</span>
         </div>
 
         {publishedArticles.length > 0 ? (

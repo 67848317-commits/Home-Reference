@@ -626,7 +626,7 @@ export const SAMPLE_REFERENCE_ARTICLE = {
     },
     {
       q: 'Why does my water heater make a loud popping noise when heating?',
-      a: 'This sound (often called kettling) occurs when mineral sediment settles at the bottom of the tank, trapping water beneath it. The trapped water superheats, turns to steam bubbles, and pops through the sediment layer. Flushing the sediment clears this condition.',
+      a: 'This sound (often called kettling) typically occurs when hardness minerals settle at the bottom of the tank, trapping water inside or beneath the sediment. As it heats locally, steam bubbles form and pop as they escape. Flushing per the unit manual helps clear loose sediment.',
     },
     {
       q: 'What is the recommended residential water heater temperature setting?',

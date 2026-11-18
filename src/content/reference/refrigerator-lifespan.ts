@@ -19,7 +19,7 @@ export const refrigeratorLifespanArticle: ReferenceArticleContent = {
   metaDescription:
     'Planning lifespan data for residential refrigerators (10–14 yrs), vapor-compression cycle mechanics, differential diagnosis for cold freezer / warm fridge, and EPA Section 608 boundaries.',
   publishedDate: '2026-01-20',
-  lastReviewedDate: '2026-11-04',
+  lastReviewedDate: '2026-11-17',
   reviewer: {
     name: 'Editorial Desk',
     desk: 'Home Reference Editorial Desk',
@@ -75,8 +75,8 @@ export const refrigeratorLifespanArticle: ReferenceArticleContent = {
     },
     {
       label: 'R-600a (Isobutane) SNAP Rules',
-      value: 'ASHRAE A3 · New Units Only',
-      note: 'Regulated separately under EPA SNAP (Rule 22 / UL 60335-2-24, ≤150 g per circuit). Never retrofit into non-flammable units; service requires ventilation, spark-proof tools, and flammable-refrigerant training',
+      value: 'Flammable · New Units Only',
+      note: 'Regulated separately under EPA SNAP (up to 150 g / 5.3 oz per cooling circuit in new units built for it; never use as a retrofit). Look for warning labels and red tube markings; leave sealed-system service to trained technicians.',
       tier: 'A',
     },
   ],
@@ -206,9 +206,9 @@ export const refrigeratorLifespanArticle: ReferenceArticleContent = {
         'No. Under EPA Section 608 of the Clean Air Act (40 CFR Part 82, Subpart F), certification rules depend on the specific task: (1) Servicing or repairing a refrigerant circuit requires Type I (for small appliances) or Universal certification whenever a technician could reasonably violate the integrity of the circuit (e.g., attaching hoses/gauges, cutting refrigerant lines, or replacing a compressor, evaporator, or condenser). (2) Handling or recovering refrigerant from an active circuit likewise requires a certified technician. (3) Replacing non-refrigerant components—such as door gaskets, evaporator or condenser fan motors, defrost thermostats, start relays, thermistors, or control boards—does not require Section 608 certification because the sealed circuit is not opened (though electrical shock hazards still warrant a qualified technician). (4) Disposal of household small appliances: a household refrigerator generally meets EPA’s "small appliance" definition when it is factory manufactured, charged, and hermetically sealed with five pounds or less of refrigerant—and EPA explicitly exempts small-appliance disposal from Section 608 technician certification requirements.',
     },
     {
-      question: 'What special EPA SNAP and safety rules apply to R-600a (isobutane) refrigerators?',
+      question: 'What should homeowners know about R-600a (isobutane) in newer refrigerators?',
       answer:
-        'Many modern residential refrigerators use R-600a (isobutane), an ASHRAE Group A3 (lower toxicity, higher flammability) hydrocarbon refrigerant regulated separately from Section 608 under EPA’s Significant New Alternatives Policy (SNAP) program (40 CFR Part 82, Subpart G). Under SNAP Rule 22 (incorporating UL Standard 60335-2-24), R-600a is acceptable only in new household refrigerators and freezers specifically designed and permanently labeled for flammable refrigerant—up to 150 grams (5.3 oz) per separate refrigerant circuit, with red (PMS #185) process/service tube markings and non-interchangeable fittings if a service port is present. R-600a must never be used as a conversion or "retrofit" refrigerant in existing appliances designed for R-134a, CFC-12, or other refrigerants. While SNAP does not mandate a separate federal license beyond Section 608, EPA recommends that only technicians specifically trained in flammable refrigerants service R-600a systems—using spark-proof tools, flammable-rated recovery gear, proper ventilation (working outdoors or in well-ventilated spaces), PPE, a nearby Class B dry powder fire extinguisher, and immediate room evacuation if an accidental release occurs.',
+        'Many newer residential refrigerators use R-600a (isobutane), a flammable hydrocarbon refrigerant regulated separately from Section 608 under the EPA’s Significant New Alternatives Policy (SNAP) program. Under EPA SNAP rules, R-600a is approved only for new household refrigerators and freezers specifically designed, labeled, and charged at the factory for flammable refrigerant (up to 150 grams, or 5.3 oz, per cooling circuit), with red markings on service tubing and permanent safety warning labels. It must never be used to recharge or retrofit older refrigerators built for non-flammable refrigerants such as R-134a. For homeowners, routine cleaning of external condenser coils and door gaskets remains safe—just never puncture cooling lines, keep open flames or sparks away if a leak is suspected, and leave any sealed-system repair to technicians trained in flammable refrigerants (using proper ventilation, spark-proof tools, and fire-safety precautions).',
     },
   ],
 
