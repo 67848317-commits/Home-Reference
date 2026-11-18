@@ -28,11 +28,6 @@ export const PILLARS_DATA: PillarHub[] = [
         relationship: 'Preventative procedures like filter changes, coil cleanouts, and water heater flushes directly prolong system service life.',
       },
       {
-        id: 'costs',
-        name: 'Costs & Ownership',
-        relationship: 'Detailed cost driver breakdowns explaining labor, equipment tonnage, duct modifications, and permit requirements.',
-      },
-      {
         id: 'lifespan',
         name: 'Lifespan & Replacement',
         relationship: 'Cross-category benchmark comparisons and master lifespan matrices for long-term capital planning.',
@@ -61,14 +56,14 @@ export const PILLARS_DATA: PillarHub[] = [
     ],
     adjacentPillars: [
       {
-        id: 'costs',
-        name: 'Costs & Ownership',
-        relationship: 'Appliance repair versus replacement frameworks for evaluating out-of-warranty diagnostic estimates.',
-      },
-      {
         id: 'maintenance',
         name: 'Home Maintenance',
         relationship: 'Routine cleaning protocols for filters, condenser coils, spray arms, and dryer vents.',
+      },
+      {
+        id: 'lifespan',
+        name: 'Lifespan & Replacement',
+        relationship: 'Empirical service lifespans and mechanical wear curves for kitchen and laundry machinery.',
       },
       {
         id: 'everyday',
@@ -117,14 +112,14 @@ export const PILLARS_DATA: PillarHub[] = [
     id: 'lifespan',
     name: 'Lifespan & Replacement',
     slug: '/lifespan/',
-    tagline: 'Empirical longevity benchmarks, wear thresholds, and end-of-life decision frameworks across the home.',
-    scope: 'Cross-category lookup tables, lifespan comparisons (tank vs. tankless, gas vs. electric), safety expiration mandates (10-year smoke alarm rule), and structural replacement indicators.',
+    tagline: 'Master Longevity Reference: Empirical service benchmarks, wear thresholds, and replacement matrices across the home.',
+    scope: 'Cross-category lookup matrices, multi-system lifespan comparisons, safety expiration thresholds (such as 10-year smoke alarm replacement standards), and structural wear indicators.',
     editorialOverview:
-      'Every component of a residential structure exists on a predictable wear curve. Knowing where an asset sits on that curve transforms unexpected emergency expenses into planned capital investments. This hub serves as a centralized reference library synthesizing authoritative data from the Department of Energy, appliance manufacturer surveys, and building inspector associations into accessible benchmark tables. We explicitly distinguish sourceable baselines from variable estimates influenced by water hardness, climate run-hours, and preventative care.',
+      'Every component of a residential structure exists on a predictable wear curve. Knowing where an asset sits on that curve transforms unexpected emergency expenses into planned capital investments. This hub serves as a Master Longevity Reference synthesizing authoritative data from the Department of Energy, appliance manufacturer surveys, and building inspector standards into accessible, claim-verified benchmark tables. We explicitly distinguish sourceable medians from variable estimates influenced by water hardness, climate run-hours, and preventative care.',
     commonQuestionsAnswered: [
-      'What is the standard estimated service life for over 60 common residential components and fixtures?',
-      'Why does NFPA 72 mandate that all smoke alarms be replaced 10 years from the date of manufacture?',
-      'Does the 20-year service life of a tankless water heater justify the higher upfront installation and descaling requirements?',
+      'What is the standard estimated service life for 59 common residential components and fixtures across major home systems?',
+      'Why does NFPA 72 recommend replacing smoke alarms 10 years from the date of manufacture?',
+      'How does the 15–20+ year planning range of a tankless water heater compare to the 8–12 year planning range of a standard storage tank under real-world water conditions?',
       'What visual and thermal indicators distinguish cosmetic window seal fogging from structural frame failure?',
       'How long do plumbing fixtures, cartridges, and shutoff valves last before seizing or weeping?',
     ],
@@ -137,12 +132,12 @@ export const PILLARS_DATA: PillarHub[] = [
       {
         id: 'appliances',
         name: 'Appliances',
-        relationship: 'Detailed operational diagnostics for kitchen and laundry machinery.',
+        relationship: 'Detailed operational diagnostics and mechanical lifespan benchmarks for kitchen and laundry machinery.',
       },
       {
-        id: 'costs',
-        name: 'Costs & Ownership',
-        relationship: 'Translating equipment age into rational repair versus replacement decisions.',
+        id: 'maintenance',
+        name: 'Home Maintenance',
+        relationship: 'Specific maintenance procedures like air filter schedules and water heater flushes that preserve component longevity.',
       },
     ],
     featuredArticleSlugs: [

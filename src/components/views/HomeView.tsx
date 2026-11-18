@@ -154,17 +154,17 @@ export const HomeView: React.FC<HomeViewProps> = ({ onNavigate, onOpenSearch }) 
         </section>
       )}
 
-      {/* SECTION 3: THE SIX CONTENT PILLARS (DIRECTORY STYLE) */}
+      {/* SECTION 3: THE CORE CONTENT PILLARS (DIRECTORY STYLE) */}
       <section className="space-y-6">
         <div className="border-b border-[#E5DFD7] pb-2 flex items-baseline justify-between">
           <h2 className="text-xs font-mono uppercase tracking-wider text-[#1C1917] font-semibold">
             Browse by Subject Area
           </h2>
-          <span className="text-xs text-[#78716C]">The Six Pillars</span>
+          <span className="text-xs text-[#78716C]">Core Reference Pillars</span>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {PILLARS_DATA.map((pillar) => (
+          {PILLARS_DATA.filter((p) => p.id !== 'costs').map((pillar) => (
             <div
               key={pillar.id}
               className="p-6 bg-white border border-[#E5DFD7] flex flex-col justify-between hover:border-[#1C1917] transition-colors"

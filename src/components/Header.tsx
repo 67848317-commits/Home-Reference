@@ -18,9 +18,7 @@ export const Header: React.FC<HeaderProps> = ({ currentPath = '/', onNavigate, o
   const navLinks = [
     { name: 'Systems', path: '/systems/' },
     { name: 'Appliances', path: '/appliances/' },
-    { name: 'Maintenance', path: '/maintenance/' },
     { name: 'Lifespan', path: '/lifespan/' },
-    { name: 'Costs', path: '/costs/' },
     { name: 'Everyday', path: '/everyday/' },
   ];
 

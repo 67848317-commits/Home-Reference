@@ -1,24 +1,98 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import { CategoryHubView } from '../../components/views/CategoryHubView';
-import { PILLARS_DATA } from '../../data/pillarsData';
 import { generateBreadcrumbSchema } from '../../utils/seo';
 
-const pillar = PILLARS_DATA.find((p) => p.id === 'costs')!;
-const title = `${pillar.name} Reference Hub`;
-const description = pillar.tagline;
+const title = 'Costs & Ownership Reference';
+const description = 'Home Reference integrates replacement costs and lifecycle economics directly into individual equipment manuals rather than maintaining separate speculative pricing estimates.';
 const schema = generateBreadcrumbSchema([
   { name: 'Home', item: '/' },
-  { name: pillar.name, item: pillar.slug },
+  { name: 'Costs & Ownership', item: '/costs/' },
 ]);
 ---
 
 <BaseLayout
   title={title}
   description={description}
-  canonicalUrl={`https://homereference.org${pillar.slug}`}
-  currentPath={pillar.slug}
+  canonicalUrl="https://homereference.org/costs/"
+  currentPath="/costs/"
   schemaJson={schema}
+  noindex={true}
 >
-  <CategoryHubView pillar={pillar} />
+  <div class="py-12 max-w-3xl mx-auto space-y-8">
+    <div class="border-b border-[#E5DFD7] pb-6">
+      <span class="text-xs font-mono uppercase tracking-widest text-[#78716C] block mb-2">
+        Editorial Organization Note
+      </span>
+      <h1 class="text-3xl sm:text-4xl font-serif font-bold text-[#1C1917] tracking-tight">
+        Equipment Costs & Ownership Economics
+      </h1>
+    </div>
+
+    <div class="prose text-[#57534E] space-y-4 text-sm sm:text-base leading-relaxed font-serif">
+      <p>
+        At Home Reference, we intentionally avoid publishing flat, generic national cost averages. Trade labor rates, local municipal permit requirements, regional climate sizing, and equipment efficiency mandates cause real-world installation quotes to vary by 50% to 100% between markets.
+      </p>
+      <p>
+        Instead of maintaining an isolated, speculative pricing catalog, <strong>capital replacement factors, repair-versus-replace guidelines, and efficiency cost trade-offs are directly integrated into each individual equipment guide:</strong>
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+      <a
+        href="/systems/water-heater-lifespan-and-replacement/"
+        class="p-5 bg-white border border-[#E5DFD7] hover:border-[#8C4736] transition-colors rounded-none group"
+      >
+        <span class="text-xs font-mono text-[#8C4736] block mb-1">Water Heating</span>
+        <h2 class="font-serif font-bold text-base text-[#1C1917] group-hover:text-[#8C4736] transition-colors">
+          Water Heater Replacement & Economics →
+        </h2>
+        <p class="text-xs text-[#78716C] mt-2">
+          Anode replacement ROI, tank vs. tankless capital factors, and sediment failure indicators.
+        </p>
+      </a>
+
+      <a
+        href="/systems/central-ac-lifespan-and-efficiency/"
+        class="p-5 bg-white border border-[#E5DFD7] hover:border-[#8C4736] transition-colors rounded-none group"
+      >
+        <span class="text-xs font-mono text-[#8C4736] block mb-1">HVAC Cooling</span>
+        <h2 class="font-serif font-bold text-base text-[#1C1917] group-hover:text-[#8C4736] transition-colors">
+          Central A/C Lifespan & SEER2 Efficiency →
+        </h2>
+        <p class="text-xs text-[#78716C] mt-2">
+          Compressor failure economics, refrigerant phase-outs, and ductwork compatibility.
+        </p>
+      </a>
+
+      <a
+        href="/systems/furnace-lifespan-and-replacement/"
+        class="p-5 bg-white border border-[#E5DFD7] hover:border-[#8C4736] transition-colors rounded-none group"
+      >
+        <span class="text-xs font-mono text-[#8C4736] block mb-1">Heating</span>
+        <h2 class="font-serif font-bold text-base text-[#1C1917] group-hover:text-[#8C4736] transition-colors">
+          Furnace Replacement & Heat Exchanger Safety →
+        </h2>
+        <p class="text-xs text-[#78716C] mt-2">
+          Evaluating 80% vs. 90%+ AFUE economics and secondary heat exchanger failure risks.
+        </p>
+      </a>
+
+      <a
+        href="/appliances/refrigerator-lifespan-and-maintenance/"
+        class="p-5 bg-white border border-[#E5DFD7] hover:border-[#8C4736] transition-colors rounded-none group"
+      >
+        <span class="text-xs font-mono text-[#8C4736] block mb-1">Kitchen Appliances</span>
+        <h2 class="font-serif font-bold text-base text-[#1C1917] group-hover:text-[#8C4736] transition-colors">
+          Refrigerator Lifespan & Repair Thresholds →
+        </h2>
+        <p class="text-xs text-[#78716C] mt-2">
+          The 50% repair rule of thumb, sealed system failure costs, and EPA Section 608 boundaries.
+        </p>
+      </a>
+    </div>
+
+    <div class="p-6 bg-[#F4EFEA] border border-[#E5DFD7] text-xs text-[#78716C] leading-relaxed">
+      <strong>Indexing Notice:</strong> This section is marked with <code>noindex, follow</code> while standalone regional cost-index models are being evaluated for verifiable primary data. All links above point to fully verified, canonical reference guides.
+    </div>
+  </div>
 </BaseLayout>

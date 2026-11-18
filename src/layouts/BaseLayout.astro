@@ -11,6 +11,7 @@ interface Props {
   currentPath?: string;
   schemaJson?: Record<string, unknown> | Array<Record<string, unknown>>;
   ogType?: string;
+  noindex?: boolean;
 }
 
 const {
@@ -20,6 +21,7 @@ const {
   currentPath = Astro.url.pathname,
   schemaJson,
   ogType = 'website',
+  noindex = false,
 } = Astro.props;
 
 const formattedTitle = title.includes('Home Reference') ? title : `${title} — Home Reference`;
@@ -37,6 +39,11 @@ const enableAnalytics = isProd && isValidGaId;
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{formattedTitle}</title>
     <meta name="description" content={description} />
+    {noindex ? (
+      <meta name="robots" content="noindex, follow" />
+    ) : (
+      <meta name="robots" content="index, follow" />
+    )}
     <link rel="canonical" href={canonicalUrl} />
 
     <!-- Open Graph -->

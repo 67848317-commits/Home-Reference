@@ -31,11 +31,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://homereference.org/costs/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://homereference.org/everyday/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>

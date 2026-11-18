@@ -71,7 +71,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
           {/* Pillars Column 2 */}
           <div className="space-y-2">
             <span className="text-[11px] font-mono uppercase tracking-wider text-[#1C1917] font-semibold block">
-              Lifespans & Economics
+              Lifespans & Guides
             </span>
             <ul className="space-y-1.5 list-none p-0 m-0">
               <li>
@@ -81,15 +81,6 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
                   className="hover:text-[#1C1917] transition-colors"
                 >
                   Lifespan & Replacement
-                </a>
-              </li>
-              <li>
-                <a
-                  href="/costs/"
-                  onClick={(e) => handleClick(e, '/costs/')}
-                  className="hover:text-[#1C1917] transition-colors"
-                >
-                  Costs & Ownership
                 </a>
               </li>
               <li>
